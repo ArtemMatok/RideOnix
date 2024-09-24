@@ -6,11 +6,12 @@ type Props = {}
 
 const Layout = (props: Props) => {
   return (
+    
     <Stack>
-        <Stack.Screen name="welcome" options={{ headerShown: false }} />
-        <Stack.Screen name="sign-up" options={{ headerShown: false }} />
-        <Stack.Screen name="sign-in" options={{ headerShown: false }} />
-      </Stack>
+        <Stack.Screen name="Welcome" options={{ headerShown: false }} />
+        <Stack.Screen name="SignUp" options={{ headerShown: false }} />
+        <Stack.Screen name="SignIn" options={{ headerShown: false }} />
+    </Stack>
   )
 }
 

@@ -8,9 +8,8 @@ type Props = {};
 
 const Home = (props: Props) => {
 
-  return (
-    <Redirect href={"/(auth)/Welcome"}/>
-  );
+    return <Redirect href="/(auth)/Welcome"/>
+
 };
 
 export default Home;
