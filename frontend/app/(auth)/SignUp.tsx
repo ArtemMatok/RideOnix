@@ -6,7 +6,7 @@ type Props = {}
 const SignUp = (props: Props) => {
   return (
     <View>
-      <Text>SignUp</Text>
+      <Text>SignUpModern</Text>
     </View>
   )
 }
