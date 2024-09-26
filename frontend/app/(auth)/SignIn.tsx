@@ -50,7 +50,7 @@ const onSignInPress = async () => {
 
               <CustomButton title='Sign In' onPress={onSignInPress} className='mt-6' />
 
-              <OAuth />
+            
 
               <Link href="/SignUp" className='text-lg text-center text-general-200 mt-10'>
                 <Text>Don`t have an account? </Text>
