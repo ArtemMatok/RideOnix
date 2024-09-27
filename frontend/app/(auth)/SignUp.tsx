@@ -35,6 +35,7 @@ const SignUp = (props: Props) => {
         const register = async () => {
           const data = await RegisterUser(form);
           if (data) {
+            console.log(data);
             //TODO: set in cookies or similar
             setIsLoading(false);
             setIsSuccess(true);

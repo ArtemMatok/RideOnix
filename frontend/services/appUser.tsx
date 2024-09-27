@@ -9,6 +9,7 @@ export const RegisterUser = async (registerUser:RegisterDto) => {
         const data = await axios.post<newUserGet>(api + "Register", registerUser);
         return data.data
     } catch (error) {
+        console.log(error);
         Alert.alert("Something went wrong");        
     }
 }
