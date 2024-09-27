@@ -9,3 +9,8 @@ export type newUserGet ={
     userName:string;
     token:string;   
 }
+
+export type LoginDto = {
+    email: string;
+    password: string;
+}
