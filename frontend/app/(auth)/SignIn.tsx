@@ -4,11 +4,16 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { icons, images } from '@/constants'
 import InputField from '@/components/InputField'
 import CustomButton from '@/components/CustomButton'
-import { Link } from 'expo-router'
-import OAuth from '@/components/OAuth'
+import { Link, router } from 'expo-router'
+import { loginValidation } from '@/lib/loginValidation'
+import { LoginUser } from '@/services/appUser'
+import ReactNativeModal from 'react-native-modal'
+
+
 
 
 type Props = {}
+
 
 const SignIn = (props: Props) => {
   const [form, setForm] = useState({
@@ -16,8 +21,30 @@ const SignIn = (props: Props) => {
     password: ''
   });
 
-const onSignInPress = async () => {
+const [isSuccess, setIsSuccess] = useState<boolean>(false);
+const [isLoading, setIsLoading] = useState<boolean>(false);
 
+const onSignInPress = async () => {
+  if(form){
+    if(loginValidation(form)){
+      setIsLoading(true);
+      const login = async () => {
+        const data = await LoginUser(form);
+        if(data){
+          console.log(data);
+          setIsLoading(false);
+          setIsSuccess(true);
+        }
+      };
+
+      login();
+    }
+  }
+};
+
+const handlePage = () => {
+  setIsSuccess(false);
+  router.push("/(root)/(tabs)/Home");
 };
 
   return (
@@ -59,6 +86,30 @@ const onSignInPress = async () => {
             </View>
 
             {/* {Verification Modal} */}
+
+          <ReactNativeModal isVisible={isSuccess}>
+            <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
+              <Image
+                source={images.check}
+                className="w-[110px] h-[110px] mx-auto my-5"
+              />
+
+              <Text className="text-2xl font-JakartaBold text-center">
+                Success
+              </Text>
+
+              <Text className="text-base text-gray-400 font-Jakarta text-center mt-2">
+                You have successfully log in your account
+              </Text>
+
+              <CustomButton
+                className="mt-5"
+                title="Browse Home"
+                onPress={() => handlePage()}
+              />
+            </View>
+          </ReactNativeModal>
+
           </View>
         </ScrollView>
     </GestureHandlerRootView>
