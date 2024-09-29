@@ -16,6 +16,7 @@ import { RegisterDto } from "@/models/appUser";
 import ReactNativeModal from "react-native-modal";
 import { registerValidation } from "@/lib/registerValidation";
 import { RegisterUser } from "@/services/appUser";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 type Props = {};
 
@@ -35,10 +36,14 @@ const SignUp = (props: Props) => {
         const register = async () => {
           const data = await RegisterUser(form);
           if (data) {
-            console.log(data);
-            //TODO: set in cookies or similar
+            await AsyncStorage.setItem("@user_email", data.email);
+            const email =   await AsyncStorage.getItem("@user_email");
+            console.log(email);
+
             setIsLoading(false);
             setIsSuccess(true);
+          } else {
+            setIsLoading(false);
           }
         };
         register();
