@@ -14,3 +14,8 @@ export type LoginDto = {
     email: string;
     password: string;
 }
+
+export type UserGet = {
+    email:string;
+    username:string;
+}

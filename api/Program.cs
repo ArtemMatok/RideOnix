@@ -1,5 +1,6 @@
 using api.Data;
 using api.Models;
+using api.Repository.UserRepo;
 using api.Services.TokenService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -85,6 +86,8 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 var app = builder.Build();
 

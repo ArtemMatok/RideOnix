@@ -14,13 +14,12 @@ namespace api.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly ApplicationDbContext _context;
         private readonly ITokenService _tokenService;
         private readonly SignInManager<AppUser> _signingManager;
-        public AccountController(UserManager<AppUser> userManager, ApplicationDbContext context, ITokenService tokenService, SignInManager<AppUser> signingManager)
+
+        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService, SignInManager<AppUser> signingManager)
         {
             _userManager = userManager;
-            _context = context;
             _tokenService = tokenService;
             _signingManager = signingManager;
         }
@@ -102,8 +101,23 @@ namespace api.Controllers
                     Token = _tokenService.CreateToken(user)
                 }
             );
+        }
 
+        [HttpGet("GetUserByEmail/{email}")]
+        public async Task<IActionResult> GetUserByEmail(string email)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == email);
 
+            if(user is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new UserGetDto()
+            {
+                Email = user.Email,
+                Username = user.UserName,
+            });
         }
     }
 }
