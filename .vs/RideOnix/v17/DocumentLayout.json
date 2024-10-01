@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,6 +78,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "api\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "api\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-26T12:48:34.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "20240927131710_ChangeDBconection.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\Migrations\\20240927131710_ChangeDBconection.cs",
@@ -98,8 +111,7 @@
               "RelativeToolTip": "api\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAADpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-27T13:16:14.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T13:16:14.984Z"
             },
             {
               "$type": "Document",
@@ -111,21 +123,7 @@
               "RelativeToolTip": "api\\Program.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T13:16:13.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "api\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "api\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-26T12:48:34.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T13:16:13.248Z"
             },
             {
               "$type": "Document",

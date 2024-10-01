@@ -33,13 +33,14 @@ const Home = (props: Props) => {
 
   // Після того, як завантаження завершене, робимо редирект
   return (
-    <>
-      {userEmail ? (
-        <Redirect href="/(root)/(tabs)/Home" />
-      ) : (
-        <Redirect href="/(auth)/Welcome" />
-      )}
-    </>
+     <>
+       {userEmail ? (
+         <Redirect href="/(root)/(tabs)/Home" />
+       ) : (
+         <Redirect href="/(auth)/Welcome" />
+       )}
+     </>
+
   );
 };
 
