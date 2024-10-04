@@ -6,6 +6,7 @@ import {
   Image,
   ActivityIndicator,
 } from "react-native";
+import * as Location from 'expo-location';
 import React, { useEffect, useState } from "react";
 import { GetUserByEmail } from "@/services/appUser";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -13,6 +14,9 @@ import { UserGet } from "@/models/appUser";
 import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
 import { GestureHandlerRootView, TouchableOpacity } from "react-native-gesture-handler";
+import GoogleTextInput from "@/components/GoogleTextInput";
+import Map from "@/components/Map";
+import { useLocationStore } from "@/store";
 
 type Props = {};
 
@@ -126,7 +130,10 @@ const recentRides = [
 const Home = (props: Props) => {
   const [user, setUser] = useState<UserGet>();
   const[email, setEmail] = useState<string>();
+  const [hasPermissions, setHasPermissions] = useState(false);
   const loading = true;
+
+  const{ setUserLocation, setDestinationLocation } = useLocationStore();
  
   useEffect(() => {
     const userGetByEmail = async () => {
@@ -142,6 +149,30 @@ const Home = (props: Props) => {
             setUser(data);
           }
         }
+
+        const requestLocation = async () => {
+            let { status } = await Location.requestForegroundPermissionsAsync();
+            
+            if(status !== 'granted'){
+              setHasPermissions(false);
+              return;
+            }
+
+          let location = await Location.getCurrentPositionAsync();
+
+          const address = await Location.reverseGeocodeAsync({
+            latitude: location.coords?.latitude!,
+            longitude: location.coords?.longitude,
+          });
+
+          setUserLocation({
+            latitude: location.coords?.latitude!,
+            longitude: location.coords?.longitude,
+            address: `${address[0].name}, ${address[0].region}`
+          });
+        };
+
+        requestLocation();
       } catch (error) {
         console.error("Error fetching user by email:", error);
       }
@@ -150,6 +181,9 @@ const Home = (props: Props) => {
   }, []);
 
   const handleSignedOut = () => {};
+  const handleDestinationPress = () => {}
+
+  
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaView className="bg-general-500">
@@ -189,8 +223,26 @@ const Home = (props: Props) => {
                 >
                   <Image source={icons.out} className="w-4 h-4" />
                 </TouchableOpacity>
-
               </View>
+
+              <GoogleTextInput
+                icon={icons.search}
+                containerStyle="bg-white shadow-md shadow-neutral-300"
+                handlePress={handleDestinationPress}
+              />
+
+              <>
+                <Text className="text-xl font-JakartaBold mt-5 mb-3">
+                  Your Current Location
+                </Text>
+                <View className="flex flex-row items-center bg-transparent h-[300px]">
+                  <Map />
+                </View>
+              </>
+
+              <Text className="text-xl font-JakartaBold mt-5 mb-3">
+                  Recent Rides
+              </Text>
             </>
           )}
         />
