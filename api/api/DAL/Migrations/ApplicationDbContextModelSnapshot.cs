@@ -116,13 +116,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6e112e92-3510-49a4-8578-0b9884050714",
+                            Id = "6097077e-fcc2-4826-b97a-55b7fbc57e66",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "409cc77d-6717-42d5-b30d-9f802c45fc91",
+                            Id = "9be3561e-18d0-4e22-94f8-8ded1695b6d7",
                             Name = "User",
                             NormalizedName = "USER"
                         });

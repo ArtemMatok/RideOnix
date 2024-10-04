@@ -64,7 +64,7 @@ const OnBoarding = (props: Props) => {
 
         <CustomButton
           title={isLastSlide ? "Get Started" : "Next"}
-          className="w-11/12 mt-10"
+          className="w-11/12 mt-10 ml-4"
           onPress={() => isLastSlide ? router.replace("/(auth)/SignUp") : swiperRef.current?.scrollBy(1)}
         />
       </View>
