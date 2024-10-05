@@ -1,6 +1,6 @@
-// import arrowDown from "@/assets/images/arrow-down.png";
-// import arrowUp from "@/assets/icons/arrow-up.png";
-// import backArrow from "@/assets/icons/back-arrow.png";
+
+import arrowUp from "@/assets/icons/arrow-up.png";
+import backArrow from "@/assets/icons/back-arrow.png";
 import chat from "@/assets/icons/chat.png";
 import checkmark from "@/assets/icons/check.png";
 import close from "@/assets/icons/close.png";
@@ -45,6 +45,8 @@ export const images = {
 
 export const icons = {
     chat,
+    backArrow,
+    arrowUp,
     checkmark,
     close,
     dollar,
