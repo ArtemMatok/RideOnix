@@ -6,17 +6,21 @@ import {
   Image,
   ActivityIndicator,
 } from "react-native";
-import * as Location from 'expo-location';
+import * as Location from "expo-location";
 import React, { useEffect, useState } from "react";
 import { GetUserByEmail } from "@/services/appUser";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { UserGet } from "@/models/appUser";
 import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
-import { GestureHandlerRootView, TouchableOpacity } from "react-native-gesture-handler";
+import {
+  GestureHandlerRootView,
+  TouchableOpacity,
+} from "react-native-gesture-handler";
 import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import { useLocationStore } from "@/store";
+import { router } from "expo-router";
 
 type Props = {};
 
@@ -129,12 +133,12 @@ const recentRides = [
 
 const Home = (props: Props) => {
   const [user, setUser] = useState<UserGet>();
-  const[email, setEmail] = useState<string>();
+  const [email, setEmail] = useState<string>();
   const [hasPermissions, setHasPermissions] = useState(false);
   const loading = true;
 
-  const{ setUserLocation, setDestinationLocation } = useLocationStore();
- 
+  const { setUserLocation, setDestinationLocation } = useLocationStore();
+
   useEffect(() => {
     const userGetByEmail = async () => {
       try {
@@ -151,12 +155,12 @@ const Home = (props: Props) => {
         }
 
         const requestLocation = async () => {
-            let { status } = await Location.requestForegroundPermissionsAsync();
-            
-            if(status !== 'granted'){
-              setHasPermissions(false);
-              return;
-            }
+          let { status } = await Location.requestForegroundPermissionsAsync();
+
+          if (status !== "granted") {
+            setHasPermissions(false);
+            return;
+          }
 
           let location = await Location.getCurrentPositionAsync();
 
@@ -168,7 +172,7 @@ const Home = (props: Props) => {
           setUserLocation({
             latitude: location.coords?.latitude!,
             longitude: location.coords?.longitude,
-            address: `${address[0].name}, ${address[0].region}`
+            address: `${address[0].name}, ${address[0].region}`,
           });
         };
 
@@ -181,9 +185,16 @@ const Home = (props: Props) => {
   }, []);
 
   const handleSignedOut = () => {};
-  const handleDestinationPress = () => {}
+  const handleDestinationPress = (location: {
+    latitude: number;
+    longitude: number;
+    address: string;
+  }) => {
+    setDestinationLocation(location);
 
-  
+    router.push("/(root)/FindRide");
+  };
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaView className="bg-general-500">
@@ -215,7 +226,6 @@ const Home = (props: Props) => {
               <View className="flex flex-row items-center justify-between my-5">
                 <Text className="text-2xl font-JakartaExtraBold">
                   Welcome, {user?.username || email?.split("@"[0])} 👋
-                  
                 </Text>
                 <TouchableOpacity
                   onPress={handleSignedOut}
@@ -241,7 +251,7 @@ const Home = (props: Props) => {
               </>
 
               <Text className="text-xl font-JakartaBold mt-5 mb-3">
-                  Recent Rides
+                Recent Rides
               </Text>
             </>
           )}
