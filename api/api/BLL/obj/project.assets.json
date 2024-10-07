@@ -2980,24 +2980,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {},
-    "D:\\c++\\NuGetPackages": {}
+    "C:\\Users\\matok\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Business.csproj",
+      "projectUniqueName": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\BLL\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Business.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\obj\\",
+      "projectPath": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\BLL\\Business.csproj",
+      "packagesPath": "C:\\Users\\matok\\.nuget\\packages\\",
+      "outputPath": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\BLL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\c++\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\matok\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3012,8 +3007,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj": {
-              "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj"
+            "D:\\IOS_TeamProject\\RideOnix\\api\\api\\DAL\\Data.csproj": {
+              "projectPath": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\DAL\\Data.csproj"
             }
           }
         }
@@ -3022,11 +3017,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3054,7 +3044,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
