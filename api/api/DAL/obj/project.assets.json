@@ -4281,19 +4281,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matok\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {},
+    "D:\\c++\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
+      "projectUniqueName": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
-      "packagesPath": "C:\\Users\\matok\\.nuget\\packages\\",
-      "outputPath": "D:\\IOS_TeamProject\\RideOnix\\api\\api\\DAL\\obj\\",
+      "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\c++\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\matok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4314,6 +4319,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4361,7 +4371,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
