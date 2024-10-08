@@ -9,16 +9,16 @@ export const generateMarkersFromData = ({
 }: {
   data: Driver[];
   userLatitude: number;
-  userLongitude: number; 
+  userLongitude: number;
 }): MarkerData[] => {
   return data.map((driver) => {
-    const latOffset = (Math.random() - 0.5) * 0.01; // Random offset between -0.005 and 0.005
-    const lngOffset = (Math.random() - 0.5) * 0.01; // Random offset between -0.005 and 0.005
+    const latOffset = (Math.random() - 0.5) * 0.01; // Випадковий зсув для широти (приблизно до 1 км)
+    const lngOffset = (Math.random() - 0.5) * 0.01; // Випадковий зсув для довготи (приблизно до 1 км)
 
     return {
-      id: driver.driver_id, // Додано id для відповідності типу MarkerData
-      latitude: userLatitude + latOffset,
-      longitude: userLongitude + lngOffset,
+      id: driver.driver_id,
+      latitude: userLatitude + latOffset, // Додаємо зміщення до широти користувача
+      longitude: userLongitude + lngOffset, // Додаємо зміщення до довготи користувача
       title: `${driver.first_name} ${driver.last_name}`,
       ...driver,
     };
