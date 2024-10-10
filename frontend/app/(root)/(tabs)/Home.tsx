@@ -143,12 +143,12 @@ const Home = (props: Props) => {
     const userGetByEmail = async () => {
       try {
         const userEmail = await AsyncStorage.getItem("@user_email");
-        console.log("EMAIL:", userEmail);
+       
 
         if (userEmail) {
           setEmail(userEmail);
           const data = await GetUserByEmail(userEmail);
-          console.log("data:", data);
+         
           if (data) {
             setUser(data);
           }

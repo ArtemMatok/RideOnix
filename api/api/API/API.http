@@ -1,4 +1,4 @@
-@API_HostAddress = http://192.168.0.108:5029
+@API_HostAddress = http://192.168.0.106:5029
 
 GET {{API_HostAddress}}/weatherforecast/
 Accept: application/json

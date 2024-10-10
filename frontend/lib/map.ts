@@ -1,3 +1,4 @@
+import { DriverGetDto } from "@/models/driver";
 import { Driver, MarkerData } from "@/types/type";
 
 const directionsAPI = process.env.EXPO_PUBLIC_GOOGLE_API_KEY;
@@ -7,7 +8,7 @@ export const generateMarkersFromData = ({
   userLatitude,
   userLongitude,
 }: {
-  data: Driver[];
+  data: DriverGetDto[];
   userLatitude: number;
   userLongitude: number;
 }): MarkerData[] => {
@@ -16,10 +17,10 @@ export const generateMarkersFromData = ({
     const lngOffset = (Math.random() - 0.5) * 0.01; // Випадковий зсув для довготи (приблизно до 1 км)
 
     return {
-      id: driver.driver_id,
+      id: driver.driverId,
       latitude: userLatitude + latOffset, // Додаємо зміщення до широти користувача
       longitude: userLongitude + lngOffset, // Додаємо зміщення до довготи користувача
-      title: `${driver.first_name} ${driver.last_name}`,
+      title: `${driver.firstName} ${driver.lastName}`,
       ...driver,
     };
   });

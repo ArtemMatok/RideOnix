@@ -54,6 +54,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.10.0, )"
@@ -65,6 +69,10 @@
             "FluentValidation.WebAPI": {
               "target": "Package",
               "version": "[8.6.1, )"
+            },
+            "Microsoft.AspNet.WebHooks.Receivers.Stripe": {
+              "target": "Package",
+              "version": "[1.2.2, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -101,6 +109,18 @@
             "NPOI": {
               "target": "Package",
               "version": "[2.7.1, )"
+            },
+            "ServiceStack.Stripe": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "ServiceStack.Stripe.Core": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[46.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -180,9 +200,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.10.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[46.1.0, )"
             }
           },
           "imports": [
@@ -274,6 +302,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[46.1.0, )"
             }
           },
           "imports": [
