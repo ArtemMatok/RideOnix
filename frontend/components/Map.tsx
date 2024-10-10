@@ -1,10 +1,16 @@
-import { View, Text } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 import { useDriverStore, useLocationStore } from "@/store";
-import { calculateRegion, generateMarkersFromData } from "@/lib/map";
+import {
+  calculateDriverTimes,
+  calculateRegion,
+  generateMarkersFromData,
+} from "@/lib/map";
 import { MarkerData } from "@/types/type";
 import { icons } from "@/constants";
+import { DriverGetDto } from "@/models/driver";
+import { GetDrivers } from "@/services/driver";
 
 const drivers = [
   {
@@ -19,7 +25,6 @@ const drivers = [
     car_seats: 4,
     rating: 4.8,
     time: 2,
-
   },
   {
     driver_id: 2, // додано id
@@ -33,7 +38,6 @@ const drivers = [
     car_seats: 5,
     time: 10,
     rating: 4.6,
-
   },
   {
     driver_id: 3, // додано id
@@ -47,7 +51,6 @@ const drivers = [
     car_seats: 4,
     time: 3,
     rating: 4.7,
-
   },
   {
     driver_id: 4, // додано id
@@ -61,7 +64,6 @@ const drivers = [
     car_seats: 4,
     time: 10,
     rating: 4.9,
-
   },
 ];
 
@@ -73,30 +75,52 @@ const Map = () => {
     destinationLongitude,
   } = useLocationStore();
 
-
   const { selectedDriver, setDrivers } = useDriverStore();
   const [markers, setMarkers] = useState<MarkerData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
   useEffect(() => {
     //TODO: Remove
-    const createMarkers = () => {
-      setDrivers(drivers);
+    const createMarkers = async () => {
+      const drivers = await GetDrivers();
 
       if (Array.isArray(drivers)) {
         if (!userLatitude || !userLongitude) return;
 
-      
         const newMarkers = generateMarkersFromData({
           data: drivers,
-          userLatitude:userLatitude, 
+          userLatitude: userLatitude,
           userLongitude: userLongitude,
         });
 
         setMarkers(newMarkers);
+        setLoading(false);
       }
     };
     createMarkers();
   }, [drivers]);
 
+  useEffect(() => {
+    if (markers.length > 0 && destinationLatitude && destinationLongitude) {
+      calculateDriverTimes({
+        markers,
+        userLatitude,
+        userLongitude,
+        destinationLongitude,
+        destinationLatitude
+      }).then((drivers) => {
+        setDrivers(drivers as MarkerData[])
+      });
+    }
+  }, [markers,destinationLatitude,destinationLongitude]);
+
+  if (loading || !userLatitude || !userLongitude) {
+    return (
+      <View className="flex justify-between items-center w-full">
+        <ActivityIndicator size="small" color="#000" />
+      </View>
+    );
+  }
 
   return (
     <MapView
@@ -110,15 +134,14 @@ const Map = () => {
     >
       {markers.map((marker) => (
         <Marker
-          key={marker.driver_id}
+          key={marker.driverId}
           coordinate={{
             latitude: marker.latitude,
             longitude: marker.longitude,
           }}
-          title={marker.title}
-          
+          title={`${marker.firstName} ${marker.lastName}`}
           image={
-            selectedDriver === marker.driver_id
+            selectedDriver === marker.driverId
               ? icons.selectedMarker
               : icons.marker
           }

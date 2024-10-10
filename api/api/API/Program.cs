@@ -1,9 +1,12 @@
 using Business.DTOs.AppUserDtos;
 using Business.Interfaces;
+using Business.Mapper;
 using Business.Services;
 using Business.Validation.AppUserValid;
 using Data.Data;
 using Data.Entities;
+using Data.Interfaces;
+using Data.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -12,6 +15,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NPOI.SS.Formula.Functions;
+using Stripe;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +31,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(MapperProfile));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -66,8 +72,12 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<LoginDtoValidator>();
 
-//builder.Services.AddScoped<IValidator<LoginDto>, LoginDtoValidator>();
-builder.Services.AddScoped<ITokenService, TokenService>();
+StripeConfiguration.ApiKey = "sk_test_51NptwQIBIeskGBr1OPizfA4iSPVobyxtclrHNsZO6L1k7ZUBQvcZYzPslzMUlXUVzNU2f4vQ3y3XCJkN0d9A5jsb007K33QPmv";
+
+builder.Services.AddScoped<IDriverService, DriverService>();
+builder.Services.AddScoped<ITokenService, Business.Services.TokenService>();
+
+builder.Services.AddScoped<IDriverRepository, DriverRepository>();
 
 var app = builder.Build();
 

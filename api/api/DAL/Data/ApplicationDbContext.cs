@@ -16,6 +16,7 @@ namespace Data.Data
         {
             
         }
+        public DbSet<Driver> Drivers { get; set; }  
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
