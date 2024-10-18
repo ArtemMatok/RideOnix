@@ -10,5 +10,6 @@ namespace Data.Interfaces
     public interface IDriverRepository
     {
         Task<List<Driver>> GetDriverAsync();
+        Task<Driver> GetDriverByIdAsync(int id);
     }
 }
