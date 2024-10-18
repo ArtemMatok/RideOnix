@@ -9,5 +9,6 @@ namespace Data.Entities
 {
     public class AppUser:IdentityUser
     {
+        public List<Ride> Rides { get; set; }
     }
 }

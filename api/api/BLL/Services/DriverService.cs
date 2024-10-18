@@ -21,6 +21,19 @@ namespace Business.Services
             _mapper = mapper;
         }
 
+        public async Task<DriverForRideDto> GetDriverById(int id)
+        {
+            var driver = await _driverRepository.GetDriverByIdAsync(id);
+
+            DriverForRideDto driverDto = _mapper.Map<DriverForRideDto>(driver);
+
+            //driverDto.FirstName = driver.FirstName;
+            //driverDto.LastName = driver.LastName;
+            //driverDto.CarSeats = driver.CarSeats;
+
+            return driverDto;
+        }
+
         public async Task<List<DriverGetDto>> GetDrivers()
         {
             var drivers = await _driverRepository.GetDriverAsync();

@@ -1,6 +1,6 @@
 import { ConfirmPaymentRequest, CreatePaymentSheetRequest, PaymentSheetCreateResponse } from "@/models/payment"
 
-const api = "http://192.168.0.106:5029/api/Payment/"
+const api = "http://192.168.0.202:5029/api/Payment/"
 
 export const CreatePaymentSheet = async (req:CreatePaymentSheetRequest) =>{
     try {

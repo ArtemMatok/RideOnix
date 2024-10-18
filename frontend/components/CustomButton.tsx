@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { ButtonProps } from "@/types/type";
+import { RideRequest } from "@/services/ride";
 
 const getBgVariantStyle = (variant: ButtonProps["bgVariant"]) => {
   switch (variant) {

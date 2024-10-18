@@ -16,6 +16,8 @@ namespace Data.Entities
         public string CarImage { get; set; }
         [Range(1, int.MaxValue, ErrorMessage = "The number of car seats must be greater than 0.")]
         public int CarSeats { get; set; }
-        public double Rating { get; set; } = 0;
+        public double? Rating { get; set; } = 0;
+
+        public List<Ride> Rides { get; set; }
     }
 }

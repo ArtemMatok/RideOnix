@@ -11,6 +11,7 @@ import { MarkerData } from "@/types/type";
 import { icons } from "@/constants";
 import { DriverGetDto } from "@/models/driver";
 import { GetDrivers } from "@/services/driver";
+import MapViewDirections from 'react-native-maps-directions'
 
 const drivers = [
   {
@@ -98,7 +99,7 @@ const Map = () => {
       }
     };
     createMarkers();
-  }, [drivers]);
+  }, [drivers, userLatitude, userLongitude]);
 
   useEffect(() => {
     if (markers.length > 0 && destinationLatitude && destinationLongitude) {
@@ -147,6 +148,35 @@ const Map = () => {
           }
         />
       ))}
+
+      {destinationLatitude && destinationLongitude && (
+        <>
+          <Marker 
+            key="destination"
+            coordinate={{
+              latitude: destinationLatitude,
+              longitude: destinationLongitude
+            }}
+            title="Destination"
+            image={icons.pin}
+          />
+
+          <MapViewDirections
+            origin={{
+              latitude: userLatitude!,
+              longitude: userLongitude!
+            }}
+            destination={{
+              latitude: destinationLatitude,
+              longitude: destinationLongitude
+            }}
+              apikey={process.env.EXPO_PUBLIC_GOOGLE_API_KEY}
+              strokeColor="#0286ff"
+              strokeWidth={3}
+          /> 
+        </>
+      )}
+
     </MapView>
   );
 };
