@@ -44,6 +44,7 @@ namespace API.Controllers
                 {
                     UserName = registerDto.UserName,
                     Email = registerDto.Email,
+                   
                 };
 
                 var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
