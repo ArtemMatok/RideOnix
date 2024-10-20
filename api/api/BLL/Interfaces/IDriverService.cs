@@ -10,5 +10,6 @@ namespace Business.Interfaces
     public interface IDriverService
     {
         Task<List<DriverGetDto>> GetDrivers();
+        Task<DriverForRideDto> GetDriverById(int id);
     }
 }

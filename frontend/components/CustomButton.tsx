@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { ButtonProps } from "@/types/type";
+import { RideRequest } from "@/services/ride";
 
 const getBgVariantStyle = (variant: ButtonProps["bgVariant"]) => {
   switch (variant) {
@@ -58,7 +59,7 @@ const CustomButton = ({
     
     <TouchableOpacity
       onPress={onPress}
-      className={`w-full rounded-full p-3 flex flex-row justify-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(bgVariant)} ${className}` }
+      className={` rounded-full p-3 flex flex-row justify-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(bgVariant)} ${className}` }
       {...props}
     >
       {IconLeft && <IconLeft />}

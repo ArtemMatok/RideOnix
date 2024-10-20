@@ -6062,11 +6062,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj",
+      "projectUniqueName": "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj",
+      "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\API.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\obj\\",
+      "outputPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\c++\\NuGetPackages"

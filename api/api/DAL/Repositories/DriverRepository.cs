@@ -23,5 +23,10 @@ namespace Data.Repositories
         {
             return await _context.Drivers.ToListAsync();
         }
+
+        public async Task<Driver> GetDriverByIdAsync(int id)
+        {
+            return await _context.Drivers.FirstOrDefaultAsync(x => x.DriverId == id);
+        }
     }
 }

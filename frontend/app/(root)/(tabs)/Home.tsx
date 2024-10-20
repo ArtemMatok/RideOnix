@@ -20,7 +20,7 @@ import {
 import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import { useLocationStore } from "@/store";
-import { router } from "expo-router";
+import { router, useNavigation } from "expo-router";
 
 type Props = {};
 
@@ -137,18 +137,18 @@ const Home = (props: Props) => {
   const [hasPermissions, setHasPermissions] = useState(false);
   const loading = true;
 
+
   const { setUserLocation, setDestinationLocation } = useLocationStore();
 
   useEffect(() => {
     const userGetByEmail = async () => {
       try {
         const userEmail = await AsyncStorage.getItem("@user_email");
-       
 
         if (userEmail) {
           setEmail(userEmail);
           const data = await GetUserByEmail(userEmail);
-         
+
           if (data) {
             setUser(data);
           }
@@ -184,7 +184,10 @@ const Home = (props: Props) => {
     userGetByEmail();
   }, []);
 
-  const handleSignedOut = () => {};
+  const handleSignedOut = async () => {
+    await AsyncStorage.removeItem("@user_email");
+    router.push("/(auth)/SignUp");
+  };
   const handleDestinationPress = (location: {
     latitude: number;
     longitude: number;
