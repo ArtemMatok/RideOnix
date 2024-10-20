@@ -18,12 +18,12 @@ namespace Data.Repositories
             _context = context;
         }
 
-        public async Task<Ride> AddRideAsync(Ride rideModel)
+        public async Task<bool> AddRideAsync(Ride rideModel)
         {
             await _context.Rides.AddAsync(rideModel);
-            await _context.SaveChangesAsync();
+            var result = await _context.SaveChangesAsync();
 
-            return rideModel;
+            return result > 0;
         }
     }
 }

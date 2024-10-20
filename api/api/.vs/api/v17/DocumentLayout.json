@@ -3,60 +3,60 @@
   "WorkspaceRootPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\validation\\ridevalid\\ridevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\validation\\ridevalid\\ridevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\dtos\\ridedtos\\rideadddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\dtos\\ridedtos\\rideadddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\services\\rideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\services\\rideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\interfaces\\irideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\interfaces\\irideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\repositories\\riderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\repositories\\riderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\interfaces\\iriderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\interfaces\\iriderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\services\\driverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\services\\driverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\validation\\appuservalid\\logindtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\validation\\appuservalid\\logindtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\interfaces\\idriverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\interfaces\\idriverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\repositories\\driverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\repositories\\driverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\interfaces\\idriverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\interfaces\\idriverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\dtos\\driverdtos\\drivergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\dtos\\driverdtos\\drivergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\entities\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\entities\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241009125855_Add_Drivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241009125855_Add_Drivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -71,8 +71,36 @@
       "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|d:\\rideonixproject\\rideonix\\api\\api\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EA79C69-91B0-469A-81DF-9AEB1AF4B6F7}|API\\API.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\mapper\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\services\\driverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\services\\driverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\interfaces\\idriverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\interfaces\\idriverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\interfaces\\idriverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\interfaces\\idriverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\dtos\\driverdtos\\drivergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|solutionrelative:bll\\dtos\\driverdtos\\drivergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241009125855_Add_Drivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241009125855_Add_Drivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{617BF19B-279D-483C-A4C3-BA5FD7606DEF}|BLL\\Business.csproj|d:\\rideonixproject\\rideonix\\api\\api\\bll\\validation\\appuservalid\\registerdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,16 +143,16 @@
       "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\migrations\\20241001120606_addroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\migrations\\20241001120606_addroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001120606_AddRoles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241001120606_AddRoles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\migrations\\20241001113330_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\migrations\\20241001113330_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001113330_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241001113330_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|d:\\rideonixproject\\rideonix\\api\\api\\dal\\migrations\\20241001113536_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{469B9B84-2E34-4AD2-BED9-DA1E16F12D12}|DAL\\Data.csproj|solutionrelative:dal\\migrations\\20241001113536_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001113536_AddIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241001113536_AddIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -166,72 +194,166 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MapperProfile.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Mapper\\MapperProfile.cs",
-              "RelativeDocumentMoniker": "BLL\\Mapper\\MapperProfile.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Mapper\\MapperProfile.cs",
-              "RelativeToolTip": "BLL\\Mapper\\MapperProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAcAAAA",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAAGwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T16:27:05.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T09:31:11.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "API\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:19:54.198Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DriverController.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\DriverController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\DriverController.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\DriverController.cs",
-              "RelativeToolTip": "API\\Controllers\\DriverController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAWwBcAAAABAAAA",
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "API\\Controllers\\PaymentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T15:57:48.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DriverService.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\DriverService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\DriverService.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\DriverService.cs",
-              "RelativeToolTip": "BLL\\Services\\DriverService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwBwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:57:04.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IDriverService.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\IDriverService.cs",
-              "RelativeDocumentMoniker": "BLL\\Interfaces\\IDriverService.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\IDriverService.cs",
-              "RelativeToolTip": "BLL\\Interfaces\\IDriverService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:53:54.895Z",
+              "WhenOpened": "2024-10-08T19:26:52.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DriverRepository.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Repositories\\DriverRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repositories\\DriverRepository.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Repositories\\DriverRepository.cs",
-              "RelativeToolTip": "DAL\\Repositories\\DriverRepository.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowBYAAAAJAAAA",
+              "Title": "RideRepository.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Repositories\\RideRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\RideRepository.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Repositories\\RideRepository.cs",
+              "RelativeToolTip": "DAL\\Repositories\\RideRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:22:19.052Z",
+              "WhenOpened": "2024-10-19T16:50:44.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRideService.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\IRideService.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\IRideService.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\IRideService.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\IRideService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:51:26.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RideService.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\RideService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\RideService.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\RideService.cs",
+              "RelativeToolTip": "BLL\\Services\\RideService.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:50:21.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RideController.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\RideController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\RideController.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\RideController.cs",
+              "RelativeToolTip": "API\\Controllers\\RideController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAuwB4AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:51:48.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RideValidator.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\RideValid\\RideValidator.cs",
+              "RelativeDocumentMoniker": "BLL\\Validation\\RideValid\\RideValidator.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\RideValid\\RideValidator.cs",
+              "RelativeToolTip": "BLL\\Validation\\RideValid\\RideValidator.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwDMAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:52:54.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "IRideRepository.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Interfaces\\IRideRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\IRideRepository.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Interfaces\\IRideRepository.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\IRideRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T18:52:41.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RideAddDto.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\RideDtos\\RideAddDto.cs",
+              "RelativeDocumentMoniker": "BLL\\DTOs\\RideDtos\\RideAddDto.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\RideDtos\\RideAddDto.cs",
+              "RelativeToolTip": "BLL\\DTOs\\RideDtos\\RideAddDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T18:55:24.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginDtoValidator.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
+              "RelativeDocumentMoniker": "BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
+              "RelativeToolTip": "BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAABxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:00:42.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DriverController.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\DriverController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\DriverController.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\DriverController.cs",
+              "RelativeToolTip": "API\\Controllers\\DriverController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAD4vxcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:57:48.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DriverRepository.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Repositories\\DriverRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\DriverRepository.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Repositories\\DriverRepository.cs",
+              "RelativeToolTip": "DAL\\Repositories\\DriverRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwBYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:22:19.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "IDriverRepository.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Interfaces\\IDriverRepository.cs",
               "RelativeDocumentMoniker": "DAL\\Interfaces\\IDriverRepository.cs",
@@ -239,112 +361,7 @@
               "RelativeToolTip": "DAL\\Interfaces\\IDriverRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAuwAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:20:51.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACAAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T09:31:11.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginDtoValidator.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
-              "RelativeDocumentMoniker": "BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
-              "RelativeToolTip": "BLL\\Validation\\AppUserValid\\LoginDtoValidator.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAuwBcAAABxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T11:00:42.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\TokenService.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\TokenService.cs",
-              "RelativeToolTip": "BLL\\Services\\TokenService.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAewAwAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:41:40.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DriverGetDto.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
-              "RelativeDocumentMoniker": "BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
-              "RelativeToolTip": "BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAIwAoAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T13:50:58.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Driver.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Entities\\Driver.cs",
-              "RelativeDocumentMoniker": "DAL\\Entities\\Driver.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Entities\\Driver.cs",
-              "RelativeToolTip": "DAL\\Entities\\Driver.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA+wAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T12:46:42.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20241009125855_Add_Drivers.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241009125855_Add_Drivers.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20241009125855_Add_Drivers.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241009125855_Add_Drivers.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20241009125855_Add_Drivers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T12:58:55.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\PaymentController.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "API\\Controllers\\PaymentController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAtwHwAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:26:52.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Data.csproj",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
-              "RelativeDocumentMoniker": "DAL\\Data.csproj",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
-              "RelativeToolTip": "DAL\\Data.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-01T09:50:03.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T14:20:51.555Z"
             },
             {
               "$type": "Document",
@@ -354,49 +371,33 @@
               "RelativeDocumentMoniker": "API\\appsettings.json",
               "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\appsettings.json",
               "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAADpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-01T09:30:57.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T09:30:57.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "API\\Properties\\launchSettings.json",
-              "ViewState": "AQIAABEAAAAAAAAAAMBdwCMAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-01T12:14:53.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "DAL\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "DAL\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBIAAAA0AAAA",
+              "DocumentIndex": 13,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Entities\\Driver.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Driver.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Entities\\Driver.cs",
+              "RelativeToolTip": "DAL\\Entities\\Driver.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:23:50.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T12:46:42.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "20241001120606_AddRoles.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001120606_AddRoles.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20241001120606_AddRoles.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001120606_AddRoles.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20241001120606_AddRoles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 20,
+              "Title": "IDriverService.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\IDriverService.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\IDriverService.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\IDriverService.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\IDriverService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T12:06:06.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T14:53:54.895Z"
             },
             {
               "$type": "Document",
@@ -406,27 +407,121 @@
               "RelativeDocumentMoniker": "API\\API.http",
               "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.http",
               "RelativeToolTip": "API\\API.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-10-01T09:31:01.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T09:31:01.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "API\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T11:19:54.198Z",
-              "EditorCaption": ""
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-01T12:14:53.058Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "DriverService.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\DriverService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\DriverService.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\DriverService.cs",
+              "RelativeToolTip": "BLL\\Services\\DriverService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwBwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:57:04.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MapperProfile.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Mapper\\MapperProfile.cs",
+              "RelativeDocumentMoniker": "BLL\\Mapper\\MapperProfile.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Mapper\\MapperProfile.cs",
+              "RelativeToolTip": "BLL\\Mapper\\MapperProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T16:27:05.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\TokenService.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Services\\TokenService.cs",
+              "RelativeToolTip": "BLL\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAewAwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T10:41:40.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DriverGetDto.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
+              "RelativeDocumentMoniker": "BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
+              "RelativeToolTip": "BLL\\DTOs\\DriverDtos\\DriverGetDto.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAIwAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T13:50:58.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20241009125855_Add_Drivers.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241009125855_Add_Drivers.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241009125855_Add_Drivers.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241009125855_Add_Drivers.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241009125855_Add_Drivers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T12:58:55.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Data.csproj",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
+              "RelativeDocumentMoniker": "DAL\\Data.csproj",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data.csproj",
+              "RelativeToolTip": "DAL\\Data.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-01T09:50:03.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DAL\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DAL\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T10:23:50.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20241001120606_AddRoles.cs",
+              "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001120606_AddRoles.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241001120606_AddRoles.cs",
+              "ToolTip": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001120606_AddRoles.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241001120606_AddRoles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T12:06:06.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "RegisterDtoValidator.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Validation\\AppUserValid\\RegisterDtoValidator.cs",
               "RelativeDocumentMoniker": "BLL\\Validation\\AppUserValid\\RegisterDtoValidator.cs",
@@ -434,12 +529,11 @@
               "RelativeToolTip": "BLL\\Validation\\AppUserValid\\RegisterDtoValidator.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAuwBoAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T11:55:56.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T11:55:56.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "20241001113330_InitialCreate.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001113330_InitialCreate.cs",
               "RelativeDocumentMoniker": "DAL\\Migrations\\20241001113330_InitialCreate.cs",
@@ -447,12 +541,11 @@
               "RelativeToolTip": "DAL\\Migrations\\20241001113330_InitialCreate.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T11:33:30.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T11:33:30.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "Business.csproj",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Business.csproj",
               "RelativeDocumentMoniker": "BLL\\Business.csproj",
@@ -460,12 +553,11 @@
               "RelativeToolTip": "BLL\\Business.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-01T11:34:00.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T11:34:00.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "20241001113536_AddIdentity.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Migrations\\20241001113536_AddIdentity.cs",
               "RelativeDocumentMoniker": "DAL\\Migrations\\20241001113536_AddIdentity.cs",
@@ -473,12 +565,11 @@
               "RelativeToolTip": "DAL\\Migrations\\20241001113536_AddIdentity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T11:35:36.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T11:35:36.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\AppUserDtos\\LoginDTO.cs",
               "RelativeDocumentMoniker": "BLL\\DTOs\\AppUserDtos\\LoginDTO.cs",
@@ -486,12 +577,11 @@
               "RelativeToolTip": "BLL\\DTOs\\AppUserDtos\\LoginDTO.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwAwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:39:19.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T10:39:19.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "NewUserDto.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\AppUserDtos\\NewUserDto.cs",
               "RelativeDocumentMoniker": "BLL\\DTOs\\AppUserDtos\\NewUserDto.cs",
@@ -499,12 +589,11 @@
               "RelativeToolTip": "BLL\\DTOs\\AppUserDtos\\NewUserDto.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAmwA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:39:37.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T10:39:37.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "BLL\\Interfaces\\ITokenService.cs",
@@ -512,12 +601,11 @@
               "RelativeToolTip": "BLL\\Interfaces\\ITokenService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:41:08.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T10:41:08.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "API.csproj",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj",
               "RelativeDocumentMoniker": "API\\API.csproj",
@@ -525,12 +613,11 @@
               "RelativeToolTip": "API\\API.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-01T11:05:31.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T11:05:31.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "UserGetDto.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\AppUserDtos\\UserGetDto.cs",
               "RelativeDocumentMoniker": "BLL\\DTOs\\AppUserDtos\\UserGetDto.cs",
@@ -538,12 +625,11 @@
               "RelativeToolTip": "BLL\\DTOs\\AppUserDtos\\UserGetDto.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:40:15.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T10:40:15.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\BLL\\DTOs\\AppUserDtos\\RegisterDto.cs",
               "RelativeDocumentMoniker": "BLL\\DTOs\\AppUserDtos\\RegisterDto.cs",
@@ -551,12 +637,11 @@
               "RelativeToolTip": "BLL\\DTOs\\AppUserDtos\\RegisterDto.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAmwBIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:40:02.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T10:40:02.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "AppUser.cs",
               "DocumentMoniker": "D:\\RideOnixProject\\RideOnix\\api\\api\\DAL\\Entities\\AppUser.cs",
               "RelativeDocumentMoniker": "DAL\\Entities\\AppUser.cs",
@@ -564,8 +649,7 @@
               "RelativeToolTip": "DAL\\Entities\\AppUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:27:01.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T10:27:01.85Z"
             }
           ]
         },

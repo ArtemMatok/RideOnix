@@ -10,6 +10,8 @@ declare interface Driver {
   rating: number;
 }
 
+export type PaymentMethod = "Cash" | "Card";
+
 declare interface MarkerData {
   latitude: number;
   longitude: number;

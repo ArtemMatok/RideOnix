@@ -9,6 +9,6 @@ namespace Business.Interfaces
 {
     public interface IRideService
     {
-        Task<RideAddDto> RideCreateAsync(RideAddDto rideDtoModel);
+        Task<bool> RideCreateAsync(RideAddDto rideDtoModel);
     }
 }

@@ -9,6 +9,6 @@ namespace Data.Interfaces
 {
     public interface IRideRepository
     {
-        Task<Ride> AddRideAsync(Ride rideModel);
+        Task<bool> AddRideAsync(Ride rideModel);
     }
 }

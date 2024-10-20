@@ -26,24 +26,28 @@ namespace Business.Services
             _userRepository = userRepository;
         }
 
-        public async Task<RideAddDto> RideCreateAsync(RideAddDto rideDtoModel)
+        public async Task<bool> RideCreateAsync(RideAddDto rideDtoModel)
         {
-            if(rideDtoModel is not null)
+            if(rideDtoModel is null)
             {
-                Ride rideForAdding = _mapper.Map<Ride>(rideDtoModel);
-
-                var driver = await _driverRepository.GetDriverByIdAsync(rideForAdding.DriverId);
-                var user = await _userRepository.GetUserByEmailAsync(rideDtoModel.userEmail);
-
-                rideForAdding.Driver = driver;
-                rideForAdding.AppUser = user;
-
-                await _rideRepository.AddRideAsync(rideForAdding);
-
-                return rideDtoModel;
+                return false;
             }
+           
+            Ride rideForAdding = _mapper.Map<Ride>(rideDtoModel);
 
-            return new RideAddDto();
+            var driver = await _driverRepository.GetDriverByIdAsync(rideForAdding.DriverId);
+            var user = await _userRepository.GetUserByEmailAsync(rideDtoModel.userEmail);
+
+            rideForAdding.Driver = driver;
+            rideForAdding.AppUser = user;
+
+            var result = await _rideRepository.AddRideAsync(rideForAdding);
+
+            if(result)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

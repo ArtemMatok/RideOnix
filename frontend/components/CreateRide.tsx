@@ -36,7 +36,7 @@ export const CreateRide = ({
     destinationLongitude: destinationLongitude!.toString(),
     rideTime: rideTime,
     farePrice: amount,  
-    paymentStatus: "paid",
+    paymentStatus: "Paid",
     userEmail: email,
     driverId: driverId,
   };

@@ -1,6 +1,9 @@
-﻿using Business.DTOs.RideDtos;
+﻿using Business.DTOs.AppUserDtos;
+using Business.DTOs.RideDtos;
 using Business.Interfaces;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace API.Controllers
 {
@@ -19,11 +22,30 @@ namespace API.Controllers
 
 
         [HttpPost("AddRide")]
-        public async Task<IActionResult> AddRide(RideAddDto dtoModel)
+        public async Task<IActionResult> AddRide(RideAddDto dtoModel, IValidator<RideAddDto> validator)
         {
-            _logger.LogInformation($"DriverId: {dtoModel.DriverId}");
-            _logger.LogInformation($"UserEmail: {dtoModel.userEmail}");
-            return Ok(await _rideService.RideCreateAsync(dtoModel));
+            if(dtoModel == null)
+            {
+                return BadRequest("Model is empty");
+            }
+            Console.WriteLine($"DTO:{dtoModel.RideTime}");
+            
+            var resultValidation = await validator.ValidateAsync(dtoModel);
+            if (!resultValidation.IsValid)
+            {
+                return BadRequest(resultValidation.Errors);
+            }
+
+            var ride = await _rideService.RideCreateAsync(dtoModel);
+
+            if(ride)
+            {
+                return Ok(ride);
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Failed to create the ride due to a service error.");
+            }
         }
     }
 }

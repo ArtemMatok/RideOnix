@@ -1,22 +1,17 @@
 import { ConfirmPaymentRequest, CreatePaymentSheetRequest, PaymentSheetCreateResponse } from "@/models/payment"
+import axios from "axios"
 
-const api = "http://192.168.0.202:5029/api/Payment/"
+const api = "http://192.168.0.205:5029/api/Payment/"
 
-export const CreatePaymentSheet = async (req:CreatePaymentSheetRequest) =>{
+export const paymentSheet = async(request:CreatePaymentSheetRequest) => {
     try {
-        const data = await axios.post<PaymentSheetCreateResponse>(api + "payment-sheet", req);
-
-        return data.data;
+        var data = await axios.post< { paymentIntent:any, ephemeralKey:any, customer:any }>(api + "payment-sheet", request);
+        if(data){
+            return data.data;
+        }else{
+            console.log("Data error paymont sheet");
+        }
     } catch (error) {
-        console.log("Payment:",error);
-    }
-} 
-
-export const ConfirmPayment = async (req:ConfirmPaymentRequest) => {
-    try {
-        const data = await axios.post<{success:boolean, message:string, result:any}>(api + "confirm-payment", req);
-        return data.data;
-    } catch (error) {
-        console.log(error);
+        console.log("Payment sheet catch error");
     }
 }
