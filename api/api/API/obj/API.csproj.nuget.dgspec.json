@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\API.csproj": {}
+    "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\API.csproj": {
+    "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\API.csproj",
+        "projectUniqueName": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\API.csproj",
+        "projectPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\api\\obj\\",
+        "outputPath": "D:\\RideOnixProject\\RideOnix\\api\\api\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\c++\\NuGetPackages"

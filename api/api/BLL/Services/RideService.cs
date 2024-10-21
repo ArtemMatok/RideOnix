@@ -26,6 +26,21 @@ namespace Business.Services
             _userRepository = userRepository;
         }
 
+        public async Task<List<RideGetDto>> GetRidesByUserEmail(string userEmail)
+        {
+            
+            var rides = await _rideRepository.GetRidesByUserEmail(userEmail);
+
+            if (rides is null)
+            {
+                return new List<RideGetDto>();  
+            }
+
+            var ridesMap = _mapper.Map<List<RideGetDto>>(rides);  
+
+            return ridesMap;
+        }
+
         public async Task<bool> RideCreateAsync(RideAddDto rideDtoModel)
         {
             if(rideDtoModel is null)

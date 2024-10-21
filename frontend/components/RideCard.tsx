@@ -1,5 +1,5 @@
 import { View, Text, Image } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { Ride } from "@/types/type";
 import { EXPO_PUBLIC_GEOAPIFY_API_KEY } from "@/constants/urlApi";
 import { icons } from "@/constants";
@@ -11,23 +11,25 @@ type Props = {
 
 const RideCard = ({
   ride: {
-    destination_longitude,
-    destination_latitude,
-    origin_address,
-    destination_address,
-    created_at,
-    ride_time,
+    rideId,
+    destinationLongitude,
+    destinationLatitude,
+    originAddress,
+    destinationAddress,
+    createdAt,
+    rideTime,
     driver,
-    payment_status,
+    paymentStatus,
   },
 }: Props) => {
+
   return (
     <View className="flex flex-row items-center justify-center bg-white rounded-lg shadow-sm shadow-neutral-300 mb-3">
       <View className="flex flex-col items-center justify-center p-3">
         <View className="flex flex-row items-center justify-between">
           <Image
             source={{
-              uri: `https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=600&height=400&center=lonlat:${destination_longitude},${destination_latitude}&zoom=14&apiKey=${EXPO_PUBLIC_GEOAPIFY_API_KEY}`,
+              uri: `https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=600&height=400&center=lonlat:${destinationLongitude},${destinationLatitude}&zoom=14&apiKey=${EXPO_PUBLIC_GEOAPIFY_API_KEY}`,
             }}
             className="w-[80px] h-[90px] rounded-lg"
           />
@@ -35,13 +37,13 @@ const RideCard = ({
             <View className="flex flex-row items-center gap-x-2">
               <Image source={icons.to} className="w-5 h-5" />
               <Text className="text-md font-JakartaMedium" numberOfLines={1}>
-                {origin_address}
+                {originAddress}
               </Text>
             </View>
             <View className="flex flex-row items-center gap-x-2">
               <Image source={icons.point} className="w-5 h-5" />
               <Text className="text-md font-JakartaMedium" numberOfLines={1}>
-                {destination_address}
+                {destinationAddress}
               </Text>
             </View>
           </View>
@@ -54,7 +56,7 @@ const RideCard = ({
             </Text>
 
             <Text className="text-md font-JakartaMedium">
-              {formatDate(created_at)}, {formatTime(ride_time)}
+              {formatDate(String(createdAt))}, {formatTime(rideTime)}
             </Text>
           </View>
           
@@ -64,7 +66,7 @@ const RideCard = ({
             </Text>
 
             <Text className="text-md font-JakartaMedium">
-              {driver.first_name} {driver.last_name}
+              {driver.firstName} {driver.lastName}
             </Text>
           </View>
 
@@ -74,7 +76,7 @@ const RideCard = ({
             </Text>
 
             <Text className="text-md font-JakartaMedium">
-              {driver.car_seats}
+              {driver.carSeats}
             </Text>
           </View>
 
@@ -83,8 +85,8 @@ const RideCard = ({
              Payment
             </Text>
 
-            <Text className={`text-md capitalize font-JakartaMedium text-gray-500 ${payment_status === "paid" ? "text-green-500": "text-red-500"}`}>
-              {payment_status}
+            <Text className={`text-md capitalize font-JakartaMedium text-gray-500 ${paymentStatus === "Paid" ? "text-green-500": "text-red-500"}`}>
+              {paymentStatus}
             </Text>
           </View>
         </View>

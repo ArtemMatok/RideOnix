@@ -21,9 +21,11 @@ const ConfirmRide = () => {
             item={item} 
           />
         )}
+       
         ListFooterComponent={() => (
+          
           <View className='mx-5 mt-10'>
-            <CustomButton title="Select Ride" onPress={() => router.push('/(root)/BookRide')} />
+            <CustomButton disabled={!selectedDriver}  title="Select Ride" onPress={() => router.push('/(root)/BookRide')} />
           </View>
         )}
       />

@@ -11,22 +11,17 @@ import { GetUserByEmail } from "@/services/appUser";
 import { UserGet } from "@/models/appUser";
 import { PaymentMethod } from "@/types/type";
 
-
-
 const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
   const { drivers, selectedDriver } = useDriverStore();
   const [email, setEmail] = useState<string>();
   const [user, setUser] = useState<UserGet>();
   const [visible, setVisible] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState("");
-
+  const [paymentMethod, setPaymentMethod] = useState("Card");
 
   const driverDetails = drivers?.filter(
     (driver) => +driver.driverId === selectedDriver
   )[0];
-
- 
 
   useEffect(() => {
     const getUserByEmail = async () => {
@@ -42,7 +37,6 @@ const BookRide = () => {
     };
     getUserByEmail();
   }, []);
-
 
   return (
     <RideLayout title="Book Ride" snapPoints={["40%", "90%"]}>
@@ -76,6 +70,12 @@ const BookRide = () => {
         </View>
 
         <View className="flex flex-col w-full items-start justify-center py-3 px-5 rounded-3xl bg-general-600 mt-5">
+          <View className="flex flex-row items-center justify-between w-full border-b border-white py-3">
+            <Text className="text-lg font-JakartaRegular">Type of car</Text>
+            <Text className="text-lg font-JakartaRegular text-black">
+              {driverDetails?.typeOfCar}
+            </Text>
+          </View>
           <View className="flex flex-row items-center justify-between w-full border-b border-white py-3">
             <Text className="text-lg font-JakartaRegular">Ride Price</Text>
             <Text className="text-lg font-JakartaRegular text-[#0CC25F]">
@@ -116,7 +116,7 @@ const BookRide = () => {
         <View className="flex flex-row items-center justify-start border-b border-general-700 w-full py-3 mt-5">
           <Image source={icons.dollar} className="w-6 h-6" />
           <Text className="text-lg font-JakartaRegular ml-2">
-            {paymentMethod === "card" ? "Card" : "Cash"}
+            {paymentMethod === "Card" ? "Card" : "Cash"}
           </Text>
         </View>
         <Button
@@ -127,7 +127,9 @@ const BookRide = () => {
         <Modal visible={visible} transparent={true}>
           <View className="flex-1 justify-center items-center">
             <View className="bg-white p-5 rounded-xl w-4/5">
-              <Text className="text-lg font-semibold mb-2">Спосіб оплати</Text>
+              <Text className="text-lg font-semibold mb-2">
+                Method of payment
+              </Text>
               <Picker
                 selectedValue={paymentMethod}
                 onValueChange={(itemValue) => setPaymentMethod(itemValue)}

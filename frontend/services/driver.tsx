@@ -1,7 +1,7 @@
 import { DriverGetDto } from "@/models/driver";
 import axios from "axios";
 
-const api ="http://192.168.0.205:5029/api/Driver/"
+const api ="http://192.168.0.202:5029/api/Driver/"
 
 export const GetDrivers = async () => {
     try {

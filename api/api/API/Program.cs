@@ -74,9 +74,12 @@ builder.Services.AddValidatorsFromAssemblyContaining<LoginDtoValidator>();
 
 StripeConfiguration.ApiKey = "sk_test_51NptwQIBIeskGBr1OPizfA4iSPVobyxtclrHNsZO6L1k7ZUBQvcZYzPslzMUlXUVzNU2f4vQ3y3XCJkN0d9A5jsb007K33QPmv";
 
+//Service
 builder.Services.AddScoped<IDriverService, DriverService>();
 builder.Services.AddScoped<ITokenService, Business.Services.TokenService>();
+builder.Services.AddScoped<IUserService, UserService>();   
 
+//Repository
 builder.Services.AddScoped<IDriverRepository, DriverRepository>();
 builder.Services.AddScoped<IRideService, RideService>();
 builder.Services.AddScoped<IRideRepository, RideRepository>();

@@ -12,7 +12,8 @@ namespace Data.Entities
         public int DriverId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string ProfileImageUrl { get; set; }
+        public string TypeOfCar { get; set; }
+        public string ProfileImageUrl { get; set; } 
         public string CarImage { get; set; }
         [Range(1, int.MaxValue, ErrorMessage = "The number of car seats must be greater than 0.")]
         public int CarSeats { get; set; }

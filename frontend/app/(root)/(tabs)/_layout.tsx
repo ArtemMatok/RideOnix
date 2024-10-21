@@ -70,16 +70,6 @@ const _layout = (props: Props) => {
         }}
       />
       <Tabs.Screen
-        name="Chat"
-        options={{
-          title: "Chat",
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} source={icons.chat} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="Profile"
         options={{
           title: "Profile",

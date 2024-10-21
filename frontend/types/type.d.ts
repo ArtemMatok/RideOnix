@@ -23,6 +23,7 @@ declare interface MarkerData {
   rating: number;
   firstName: string;
   lastName: string;
+  typeOfCar?:"Comfort" | "Business";
   time?: number;
   price?: string;
 }
@@ -36,22 +37,24 @@ declare interface MapProps {
 }
 
 declare interface Ride {
-  origin_address: string;
-  destination_address: string;
-  origin_latitude: number;
-  origin_longitude: number;
-  destination_latitude: number;
-  destination_longitude: number;
-  ride_time: number;
-  fare_price: number;
-  payment_status: string;
-  driver_id: number;
-  user_email: string;
-  created_at: string;
+  rideId:number;
+  originAddress: string;
+  destinationAddress: string;
+  originLatitude: number;
+  originLongitude: number;
+  destinationLatitude: number;
+  destinationLongitude: number;
+  rideTime: number;
+  farePrice: number;
+  paymentStatus: string;
+  driverId: number;
+  userEmail: string;
+  createdAt: Date;
   driver: {
-    first_name: string;
-    last_name: string;
-    car_seats: number;
+    driverId:number;
+    firstName: string;
+    lastName: string;
+    carSeats: number;
   };
 }
 

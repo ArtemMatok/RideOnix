@@ -45,31 +45,31 @@ export const CreateRide = ({
   console.log(`create ride userLongitude: ${userLongitude}`);
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={() => handleCreateRide(request)}>
-        <Text style={styles.buttonText}>Add Ride</Text>
+    <View className="mt-2">
+      <TouchableOpacity  className={`rounded-full p-3 flex flex-row justify-center shadow-md shadow-neutral-400/70 primary bg-[#0286ff]` } onPress={() => handleCreateRide(request)}>
+      <Text className={`text-lg font-bold text-white`}>Add Ride</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1
-  },
-  button: {
-    backgroundColor: '#1e90ff', 
-    paddingVertical: 15,
-    paddingHorizontal: 25, 
-    borderRadius: 10, 
-    marginVertical: 10, 
-  },
-  buttonText: {
-    color: '#fff', 
-    fontSize: 18, 
-    fontWeight: 'bold', 
-    textAlign: 'center', 
-  }
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     flex: 1
+//   },
+//   button: {
+//     backgroundColor: '#1e90ff', 
+//     paddingVertical: 15,
+//     paddingHorizontal: 25, 
+//     borderRadius: 10, 
+//     marginVertical: 10, 
+//   },
+//   buttonText: {
+//     color: '#fff', 
+//     fontSize: 18, 
+//     fontWeight: 'bold', 
+//     textAlign: 'center', 
+//   }
+// });

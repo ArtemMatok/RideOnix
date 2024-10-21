@@ -117,6 +117,10 @@ namespace Data.Migrations
                     b.Property<double?>("Rating")
                         .HasColumnType("float");
 
+                    b.Property<string>("TypeOfCar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("DriverId");
 
                     b.ToTable("Drivers");
@@ -216,13 +220,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "feb7fb3f-6c88-4073-8f1b-a3ae73dafbb5",
+                            Id = "55c55d18-6796-4f27-b974-a7e63c794e5c",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "9c64c3d6-9a2d-4082-a2bb-30a5a852996b",
+                            Id = "9b561f7d-c178-4529-b317-05356659e83b",
                             Name = "User",
                             NormalizedName = "USER"
                         });
