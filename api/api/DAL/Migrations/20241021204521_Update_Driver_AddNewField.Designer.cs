@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241017111724_UpdateInRide")]
-    partial class UpdateInRide
+    [Migration("20241021204521_Update_Driver_AddNewField")]
+    partial class Update_Driver_AddNewField
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -105,6 +105,10 @@ namespace Data.Migrations
                     b.Property<int>("CarSeats")
                         .HasColumnType("int");
 
+                    b.Property<string>("ClassOfCar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -136,9 +140,8 @@ namespace Data.Migrations
                     b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("CreatedAt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("DestinationAddress")
                         .IsRequired()
@@ -220,13 +223,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "64a5699d-d0ab-469d-86c7-70b1ed43bf7e",
+                            Id = "7e8f4142-245c-460b-a670-6fc5a56a1af2",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "186cbf1b-8960-4f4a-9774-9ad71c73c81a",
+                            Id = "a78dcdf6-df3c-4c81-a9ff-3e712056e129",
                             Name = "User",
                             NormalizedName = "USER"
                         });

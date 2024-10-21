@@ -1,3 +1,4 @@
+import { Ride } from "@/types/type";
 import axios from "axios";
 import { Alert } from "react-native";
 
@@ -15,7 +16,7 @@ export interface RideRequest{
     driverId: number,
 }
 
-const api  = "http://192.168.0.205:5029/api/Ride/"
+const api  = "http://192.168.0.202:5029/api/Ride/"
 
 // export const addRide = async (rideRequest: RideRequest) => {
 //     try {
@@ -47,5 +48,19 @@ export const addRide = async(rideRequest: RideRequest) => {
     } catch (error:any) {
         console.log("addRideERROR:",error.response.data);
         Alert.alert("Ooops, someting went wrong...");
+    }
+}
+
+export const getRidesByUserEmail = async( userEmail:string) => {
+    try {
+        const data = await axios.get<Ride[]>(api+`GetRidesByUserEmail/${userEmail}`);
+        if(data){
+           console.log("length:",data.data.length)
+            return data.data;
+        }else{
+            console.log("Data rides error");
+        }
+    } catch (error:any) {
+        console.log("GetRidesError:",error.response.data);
     }
 }

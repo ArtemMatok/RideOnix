@@ -37,7 +37,7 @@ const SignUp = (props: Props) => {
           const data = await RegisterUser(form);
           if (data) {
             await AsyncStorage.setItem("@user_email", data.email);
-            const email =   await AsyncStorage.getItem("@user_email");
+            const email = await AsyncStorage.getItem("@user_email");
             console.log(email);
 
             setIsLoading(false);

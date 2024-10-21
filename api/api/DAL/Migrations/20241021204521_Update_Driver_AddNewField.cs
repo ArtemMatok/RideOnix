@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class RideTable : Migration
+    public partial class Update_Driver_AddNewField : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -60,6 +60,7 @@ namespace Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ClassOfCar = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProfileImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CarImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CarSeats = table.Column<int>(type: "int", nullable: false),
@@ -188,10 +189,10 @@ namespace Data.Migrations
                     OriginLongitude = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DestinationLatitude = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DestinationLongitude = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RideTime = table.Column<int>(type: "int", nullable: false),
+                    RideTime = table.Column<double>(type: "float", nullable: false),
                     FarePrice = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     userEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AppUserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     DriverId = table.Column<int>(type: "int", nullable: false)
@@ -217,8 +218,8 @@ namespace Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "bc0af062-434c-46e7-8b7c-045edeb3b6b4", null, "Admin", "ADMIN" },
-                    { "d2d827f6-4939-4655-ac80-2b021a8694ae", null, "User", "USER" }
+                    { "7e8f4142-245c-460b-a670-6fc5a56a1af2", null, "Admin", "ADMIN" },
+                    { "a78dcdf6-df3c-4c81-a9ff-3e712056e129", null, "User", "USER" }
                 });
 
             migrationBuilder.CreateIndex(

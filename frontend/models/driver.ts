@@ -3,6 +3,7 @@ export type DriverGetDto = {
     firstName:string;
     lastName:string;
     profileImageUrl:string;
+    typeOfCar:"Comfort" | "Business";
     carImage:string;
     carSeats:number;
     rating:number

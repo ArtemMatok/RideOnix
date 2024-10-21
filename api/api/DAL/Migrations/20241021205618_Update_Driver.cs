@@ -7,7 +7,7 @@
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateInRide : Migration
+    public partial class Update_Driver : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,28 +15,25 @@ namespace Data.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "bc0af062-434c-46e7-8b7c-045edeb3b6b4");
+                keyValue: "7e8f4142-245c-460b-a670-6fc5a56a1af2");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "d2d827f6-4939-4655-ac80-2b021a8694ae");
+                keyValue: "a78dcdf6-df3c-4c81-a9ff-3e712056e129");
 
-            migrationBuilder.AlterColumn<double>(
-                name: "RideTime",
-                table: "Rides",
-                type: "float",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "int");
+            migrationBuilder.RenameColumn(
+                name: "ClassOfCar",
+                table: "Drivers",
+                newName: "TypeOfCar");
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "186cbf1b-8960-4f4a-9774-9ad71c73c81a", null, "User", "USER" },
-                    { "64a5699d-d0ab-469d-86c7-70b1ed43bf7e", null, "Admin", "ADMIN" }
+                    { "55c55d18-6796-4f27-b974-a7e63c794e5c", null, "Admin", "ADMIN" },
+                    { "9b561f7d-c178-4529-b317-05356659e83b", null, "User", "USER" }
                 });
         }
 
@@ -46,28 +43,25 @@ namespace Data.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "186cbf1b-8960-4f4a-9774-9ad71c73c81a");
+                keyValue: "55c55d18-6796-4f27-b974-a7e63c794e5c");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "64a5699d-d0ab-469d-86c7-70b1ed43bf7e");
+                keyValue: "9b561f7d-c178-4529-b317-05356659e83b");
 
-            migrationBuilder.AlterColumn<int>(
-                name: "RideTime",
-                table: "Rides",
-                type: "int",
-                nullable: false,
-                oldClrType: typeof(double),
-                oldType: "float");
+            migrationBuilder.RenameColumn(
+                name: "TypeOfCar",
+                table: "Drivers",
+                newName: "ClassOfCar");
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "bc0af062-434c-46e7-8b7c-045edeb3b6b4", null, "Admin", "ADMIN" },
-                    { "d2d827f6-4939-4655-ac80-2b021a8694ae", null, "User", "USER" }
+                    { "7e8f4142-245c-460b-a670-6fc5a56a1af2", null, "Admin", "ADMIN" },
+                    { "a78dcdf6-df3c-4c81-a9ff-3e712056e129", null, "User", "USER" }
                 });
         }
     }

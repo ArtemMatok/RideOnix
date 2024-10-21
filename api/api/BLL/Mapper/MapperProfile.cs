@@ -16,7 +16,9 @@ namespace Business.Mapper
         {
             CreateMap<Driver, DriverGetDto>();
             CreateMap<Ride, RideAddDto>().ReverseMap();
+            CreateMap<Driver, DriverShortDto>();
             CreateMap<Driver, DriverForRideDto>().ReverseMap();
+            CreateMap<Ride, RideGetDto>().ReverseMap();
         }
     }
 }

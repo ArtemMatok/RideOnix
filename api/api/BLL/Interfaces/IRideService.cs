@@ -10,5 +10,5 @@ namespace Business.Interfaces
     public interface IRideService
     {
         Task<bool> RideCreateAsync(RideAddDto rideDtoModel);
-    }
+        Task<List<RideGetDto>> GetRidesByUserEmail(string email);    }
 }

@@ -133,7 +133,8 @@ export const calculateDriverTimes = async ({
         dataToDestination.routes[0].legs[0].duration.value; // Час у секундах
 
       const totalTime = (timeToUser + timeToDestination) / 60; // Загальний час у хвилинах
-      const price = (totalTime * 0.5).toFixed(2); // Обчислення ціни на основі часу
+      
+      const price = marker.typeOfCar === "Comfort" ? (totalTime *0.5).toFixed(2) : (totalTime * 1.2).toFixed(2);
 
       return { ...marker, time: totalTime, price };
     });

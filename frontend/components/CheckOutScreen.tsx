@@ -103,7 +103,7 @@ export default function CheckoutScreen({ name, email, amount,rideTime, driverId 
     <>
       <CustomButton
         title="Confirm Ride"
-        className="my-10"
+        className="my-2"
         onPress={onPaymentSheet}
       ></CustomButton>
     </>

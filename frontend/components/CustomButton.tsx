@@ -43,6 +43,7 @@ type Props = {
   IconLeft?: any;
   IconRight?: any;
   className?: string;
+  disabled?:boolean;
 };
 
 const CustomButton = ({
@@ -53,11 +54,13 @@ const CustomButton = ({
   IconRight,
   IconLeft,
   className,
+  disabled,
   ...props
 }: Props) => {
   return (
     
     <TouchableOpacity
+      disabled={disabled}
       onPress={onPress}
       className={` rounded-full p-3 flex flex-row justify-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(bgVariant)} ${className}` }
       {...props}

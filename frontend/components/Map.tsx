@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, Text, ActivityIndicator, Alert } from "react-native";
 import React, { useEffect, useState } from "react";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 import { useDriverStore, useLocationStore } from "@/store";
@@ -11,7 +11,7 @@ import { MarkerData } from "@/types/type";
 import { icons } from "@/constants";
 import { DriverGetDto } from "@/models/driver";
 import { GetDrivers } from "@/services/driver";
-import MapViewDirections from 'react-native-maps-directions'
+import MapViewDirections from "react-native-maps-directions";
 
 const drivers = [
   {
@@ -108,12 +108,12 @@ const Map = () => {
         userLatitude,
         userLongitude,
         destinationLongitude,
-        destinationLatitude
+        destinationLatitude,
       }).then((drivers) => {
-        setDrivers(drivers as MarkerData[])
+        setDrivers(drivers as MarkerData[]);
       });
     }
-  }, [markers,destinationLatitude,destinationLongitude]);
+  }, [markers, destinationLatitude, destinationLongitude]);
 
   if (loading || !userLatitude || !userLongitude) {
     return (
@@ -151,11 +151,11 @@ const Map = () => {
 
       {destinationLatitude && destinationLongitude && (
         <>
-          <Marker 
+          <Marker
             key="destination"
             coordinate={{
               latitude: destinationLatitude,
-              longitude: destinationLongitude
+              longitude: destinationLongitude,
             }}
             title="Destination"
             image={icons.pin}
@@ -164,19 +164,27 @@ const Map = () => {
           <MapViewDirections
             origin={{
               latitude: userLatitude!,
-              longitude: userLongitude!
+              longitude: userLongitude!,
             }}
             destination={{
               latitude: destinationLatitude,
-              longitude: destinationLongitude
+              longitude: destinationLongitude,
             }}
-              apikey={process.env.EXPO_PUBLIC_GOOGLE_API_KEY}
-              strokeColor="#0286ff"
-              strokeWidth={3}
-          /> 
+            apikey={process.env.EXPO_PUBLIC_GOOGLE_API_KEY!}
+            strokeColor="#0286ff"
+            strokeWidth={3}
+            onError={(errorMessage) => {
+              // Виведення помилки через Alert
+              Alert.alert(
+                "Route not found",
+                "I couldn't find the route to the destination. Try a different address.",
+                [{ text: "OK" }]
+              );
+              console.error("Помилка при розрахунку маршруту:", errorMessage);
+            }}
+          />
         </>
       )}
-
     </MapView>
   );
 };
