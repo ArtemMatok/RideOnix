@@ -21,9 +21,8 @@ declare interface MarkerData {
   carImage: string;
   carSeats: number;
   rating: number;
-  firstName: string;
-  lastName: string;
-  typeOfCar?:"Comfort" | "Business";
+  fullName: string;
+  typeOfCar?: "Comfort" | "Business";
   time?: number;
   price?: string;
 }
@@ -37,7 +36,7 @@ declare interface MapProps {
 }
 
 declare interface Ride {
-  rideId:number;
+  rideId: number;
   originAddress: string;
   destinationAddress: string;
   originLatitude: number;
@@ -51,7 +50,7 @@ declare interface Ride {
   userEmail: string;
   createdAt: Date;
   driver: {
-    driverId:number;
+    driverId: number;
     firstName: string;
     lastName: string;
     carSeats: number;

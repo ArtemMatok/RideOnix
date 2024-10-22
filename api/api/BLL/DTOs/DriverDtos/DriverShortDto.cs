@@ -9,8 +9,7 @@ namespace Business.DTOs.DriverDtos
     public class DriverShortDto
     {
         public int DriverId { get; set; }
-        public string FirstName { get; set; }   
-        public string LastName { get; set; } 
+        public string FullName { get; set; }
         public int CarSeats { get; set; }   
     }
 }

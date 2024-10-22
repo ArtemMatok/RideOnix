@@ -33,6 +33,11 @@ namespace Data.Data
                 {
                     Name = "User",
                     NormalizedName = "USER"
+                },
+                new IdentityRole
+                {
+                    Name = "Driver",
+                    NormalizedName = "DRIVER"
                 }
             };
             builder.Entity<IdentityRole>().HasData(roles);
