@@ -11,5 +11,7 @@ namespace Business.Interfaces
     {
         Task<List<DriverGetDto>> GetDrivers();
         Task<DriverForRideDto> GetDriverById(int id);
+        Task<bool> UpdateDriver(int id, DriverGetDto driverDto);
+        Task<bool> AddDriver(DriverAddDto driverDto);
     }
 }

@@ -216,19 +216,19 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f59c664d-02fb-43d8-a48d-055cffa5bff7",
+                            Id = "7ccb422f-ff0a-43ec-a51e-25ae9b9248cc",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "b4e22df2-59c1-4a3c-a55a-84594b33fbbb",
+                            Id = "bbc69158-f510-4ffa-bec1-1e8072860e90",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "a62e8342-493f-4ffd-abe9-47cc54f654ee",
+                            Id = "83f51843-7867-4ae8-9a8b-cc52dfa45057",
                             Name = "Driver",
                             NormalizedName = "DRIVER"
                         });

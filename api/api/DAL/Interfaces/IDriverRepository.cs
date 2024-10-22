@@ -11,5 +11,7 @@ namespace Data.Interfaces
     {
         Task<List<Driver>> GetDriverAsync();
         Task<Driver> GetDriverByIdAsync(int id);
+        Task<bool> AddDriverAsync(Driver driver);
+        Task<bool> UpdateDriverAsync(int id, Driver driverForUpdate);
     }
 }

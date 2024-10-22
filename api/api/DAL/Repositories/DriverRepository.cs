@@ -19,6 +19,31 @@ namespace Data.Repositories
             _context = context;
         }
 
+        public async Task<bool> AddDriverAsync(Driver driver)
+        {
+            await _context.Drivers.AddAsync(driver);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+
+        public async Task<bool> UpdateDriverAsync(int id, Driver driverForUpdate)
+        {
+            var driver = await _context.Drivers.FirstOrDefaultAsync(x => x.DriverId == id);
+
+            if(driver is null)
+            {
+                return false;
+            }
+            else
+            {
+                _context.Entry(driver).CurrentValues.SetValues(driverForUpdate);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+        }
+
         public async Task<List<Driver>> GetDriverAsync()
         {
             return await _context.Drivers.ToListAsync();
