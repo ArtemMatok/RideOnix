@@ -16,7 +16,7 @@ export interface RideRequest{
     driverId: number,
 }
 
-const api  = "http://192.168.0.202:5029/api/Ride/"
+const api  = "http://192.168.0.201:5029/api/Ride/"
 
 // export const addRide = async (rideRequest: RideRequest) => {
 //     try {

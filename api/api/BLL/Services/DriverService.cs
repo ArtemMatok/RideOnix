@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Business.DTOs.DriverDtos;
 using Business.Interfaces;
+using Data.Entities;
 using Data.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,19 @@ namespace Business.Services
         {
             _driverRepository = driverRepository;
             _mapper = mapper;
+        }
+
+        public async Task<bool> AddDriver(DriverAddDto driverDto)
+        {
+            if(driverDto is not null)
+            {
+                Driver driver = _mapper.Map<Driver>(driverDto);
+
+                await _driverRepository.AddDriverAsync(driver);
+
+                return true;
+            }
+            return false;
         }
 
         public async Task<DriverForRideDto> GetDriverById(int id)
@@ -44,6 +58,37 @@ namespace Business.Services
             List<DriverGetDto> driversDto = _mapper.Map<List<DriverGetDto>>(drivers);
 
             return driversDto;
+        }
+
+        public async Task<bool> UpdateDriver(int id, DriverGetDto driverDto)
+        {
+            if(id == 0)
+            {
+                return false;
+            }
+            else
+            {
+                if(driverDto is null)
+                {
+                    return false;
+                }
+                else
+                {
+                    Driver driver = _mapper.Map<Driver>(driverDto);
+                    if(driver.TypeOfCar == "Business")
+                    {
+                        driver.CarImage = "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Black_v1.png";
+                    }
+                    else
+                    {
+                        driver.CarImage = "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/package_UberComfort_new_2022.png";
+                    }
+
+                    await _driverRepository.UpdateDriverAsync(id, driver);
+
+                    return true;
+                }
+            }
         }
     }
 }   

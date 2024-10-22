@@ -27,12 +27,12 @@ namespace API.Controllers
         [HttpPost("AddRide")]
         public async Task<IActionResult> AddRide(RideAddDto dtoModel, IValidator<RideAddDto> validator)
         {
-            if(dtoModel == null)
+            if (dtoModel == null)
             {
                 return BadRequest("Model is empty");
             }
             Console.WriteLine($"DTO:{dtoModel.RideTime}");
-            
+
             var resultValidation = await validator.ValidateAsync(dtoModel);
             if (!resultValidation.IsValid)
             {
@@ -41,7 +41,7 @@ namespace API.Controllers
 
             var ride = await _rideService.RideCreateAsync(dtoModel);
 
-            if(ride)
+            if (ride)
             {
                 return Ok(ride);
             }
@@ -55,13 +55,13 @@ namespace API.Controllers
         [HttpGet("GetRidesByUserEmail/{userEmail}")]
         public async Task<IActionResult> GetRidesByUserEmail(string userEmail)
         {
-            if(userEmail is null)
+            if (userEmail is null)
             {
                 return BadRequest("User email is null");
             }
 
             var existUser = await _userService.IsExistUser(userEmail);
-            if(!existUser)
+            if (!existUser)
             {
                 return NotFound("User wasn`t found");
             }

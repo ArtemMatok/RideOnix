@@ -14,11 +14,13 @@ namespace Business.Mapper
     {
         public MapperProfile()
         {
-            CreateMap<Driver, DriverGetDto>();
+            CreateMap<DriverGetDto, Driver>();
+            CreateMap<Driver, DriverGetDto>().ReverseMap();
             CreateMap<Ride, RideAddDto>().ReverseMap();
             CreateMap<Driver, DriverShortDto>();
             CreateMap<Driver, DriverForRideDto>().ReverseMap();
             CreateMap<Ride, RideGetDto>().ReverseMap();
+            CreateMap<Driver, DriverAddDto>().ReverseMap();
         }
     }
 }
