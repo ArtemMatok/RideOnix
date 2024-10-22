@@ -10,8 +10,7 @@ namespace Business.DTOs.DriverDtos
     public class DriverGetDto
     {
         public int DriverId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FullName { get; set; }    
         public string ProfileImageUrl { get; set; }
         public string TypeOfCar { get;set; }    
         public string CarImage { get; set; }

@@ -28,55 +28,117 @@ namespace API.Controllers
             _signingManager = signingManager;
         }
 
-        [HttpPost("Register")]
-        public async Task<IActionResult> Register(RegisterDto registerDto, IValidator<RegisterDto> validator)
+        [HttpPost("Register/{role}")]
+        public async Task<IActionResult> Register(string role, RegisterDto registerDto, IValidator<RegisterDto> validator)
         {
-            try
+            if (role is null)
             {
-                ValidationResult resultValidation = await validator.ValidateAsync(registerDto);
-                if (!resultValidation.IsValid)
+                return BadRequest("Role is required");
+            }
+            if(role =="User")
+            {
+                try
                 {
-                    return BadRequest(resultValidation.Errors);
-                }
-
-
-                var appUser = new AppUser
-                {
-                    UserName = registerDto.UserName,
-                    Email = registerDto.Email,
-                   
-                };
-
-                var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
-
-                if (createdUser.Succeeded)
-                {
-                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
-                    if (roleResult.Succeeded)
+                    ValidationResult resultValidation = await validator.ValidateAsync(registerDto);
+                    if (!resultValidation.IsValid)
                     {
-                        return Ok(new NewUserDto()
+                        return BadRequest(resultValidation.Errors);
+                    }
+
+
+                    var appUser = new AppUser
+                    {
+                        UserName = registerDto.UserName,
+                        Email = registerDto.Email,
+
+                    };
+
+                    var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
+
+                    if (createdUser.Succeeded)
+                    {
+                        var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
+                        if (roleResult.Succeeded)
                         {
-                            Username = appUser.UserName,
-                            Email = appUser.Email,
-                            Token = _tokenService.CreateToken(appUser)
-                        });
+                            return Ok(new NewUserDto()
+                            {
+                                Username = appUser.UserName,
+                                Email = appUser.Email,
+                                Token = _tokenService.CreateToken(appUser)
+                            });
+                        }
+                        else
+                        {
+                            return StatusCode(500, roleResult.Errors);
+                        }
                     }
                     else
                     {
-                        return StatusCode(500, roleResult.Errors);
+                        return StatusCode(500, createdUser.Errors);
                     }
+
                 }
-                else
+                catch (Exception e)
                 {
-                    return StatusCode(500, createdUser.Errors);
+
+                    return StatusCode(500, e.Message);
                 }
-
             }
-            catch (Exception e)
+            else if(role == " Driver")
             {
+                //TODO: доробити додавання драйвера в БД
+                try
+                {
+                    ValidationResult resultValidation = await validator.ValidateAsync(registerDto);
+                    if (!resultValidation.IsValid)
+                    {
+                        return BadRequest(resultValidation.Errors);
+                    }
 
-                return StatusCode(500, e.Message);
+
+                    var appUser = new AppUser
+                    {
+                        UserName = registerDto.UserName,
+                        Email = registerDto.Email,
+
+                    };
+
+                    var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
+
+                    if (createdUser.Succeeded)
+                    {
+                        var roleResult = await _userManager.AddToRoleAsync(appUser, "Driver");
+                        if (roleResult.Succeeded)
+                        {
+                            return Ok(new NewUserDto()
+                            {
+                                Username = appUser.UserName,
+                                Email = appUser.Email,
+                                Token = _tokenService.CreateToken(appUser)
+                            });
+                        }
+                        else
+                        {
+                            return StatusCode(500, roleResult.Errors);
+                        }
+                    }
+                    else
+                    {
+                        return StatusCode(500, createdUser.Errors);
+                    }
+
+                }
+                catch (Exception e)
+                {
+
+                    return StatusCode(500, e.Message);
+                }
             }
+            else
+            {
+                return BadRequest("Role wasn`t found");
+            }
+            
         }
 
         [HttpPost("Login")]

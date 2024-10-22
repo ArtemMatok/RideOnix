@@ -53,7 +53,7 @@ const BookRide = () => {
 
           <View className="flex flex-row items-center justify-center mt-5 space-x-2">
             <Text className="text-lg font-JakartaSemiBold">
-              {driverDetails?.title}
+              {driverDetails?.fullName}
             </Text>
 
             <View className="flex flex-row items-center space-x-0.5">
