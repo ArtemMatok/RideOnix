@@ -11,6 +11,7 @@ namespace Business.DTOs.DriverDtos
     {
         public int DriverId { get; set; }
         public string FullName { get; set; }    
+        public string Email { get; set; }   
         public string ProfileImageUrl { get; set; }
         public string TypeOfCar { get;set; }    
         public string CarImage { get; set; }

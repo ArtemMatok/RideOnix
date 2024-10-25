@@ -9,5 +9,6 @@ namespace Business.DTOs.DriverDtos
     public class DriverAddDto
     {
         public string FullName { get; set;}
+        public string Email { get; set;}    
     }
 }

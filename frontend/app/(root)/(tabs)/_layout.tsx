@@ -5,7 +5,7 @@ import { icons } from "@/constants";
 
 type Props = {};
 
-const TabIcon = ({
+export const TabIcon = ({
   source,
   focused,
 }: {

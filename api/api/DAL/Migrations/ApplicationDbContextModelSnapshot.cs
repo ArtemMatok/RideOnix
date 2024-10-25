@@ -102,6 +102,10 @@ namespace Data.Migrations
                     b.Property<int>("CarSeats")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -216,19 +220,19 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7ccb422f-ff0a-43ec-a51e-25ae9b9248cc",
+                            Id = "89275621-1bcf-487d-a08e-986082e2efef",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "bbc69158-f510-4ffa-bec1-1e8072860e90",
+                            Id = "c8c6a6ad-6753-4a90-9da2-1761452a2903",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "83f51843-7867-4ae8-9a8b-cc52dfa45057",
+                            Id = "16d510a6-aec2-461d-b139-91082d76790c",
                             Name = "Driver",
                             NormalizedName = "DRIVER"
                         });

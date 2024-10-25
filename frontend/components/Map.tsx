@@ -140,7 +140,7 @@ const Map = () => {
             latitude: marker.latitude,
             longitude: marker.longitude,
           }}
-          title={`${marker.firstName} ${marker.lastName}`}
+          title={`${marker.fullName}`}
           image={
             selectedDriver === marker.driverId
               ? icons.selectedMarker

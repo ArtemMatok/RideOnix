@@ -11,6 +11,7 @@ namespace Data.Entities
     {
         public int DriverId { get; set; }
         public string FullName { get; set; }    
+        public string Email { get;set; }
         public string TypeOfCar { get; set; } = "Comfort";
         public string ProfileImageUrl { get; set; } = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
         public string CarImage { get; set; } = "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/package_UberComfort_new_2022.png";

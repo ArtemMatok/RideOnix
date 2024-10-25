@@ -22,7 +22,7 @@ const OnBoarding = (props: Props) => {
       <SafeAreaView className="w-full flex justify-end items-end px-6">
         <TouchableOpacity
           onPress={() => {
-            router.replace("/(auth)/SignUp");
+            router.replace("/(auth)/SelectRegister");
           }}
         >
           <Text className="text-black text-md font-JakartaBold">Skip</Text>
@@ -65,7 +65,7 @@ const OnBoarding = (props: Props) => {
         <CustomButton
           title={isLastSlide ? "Get Started" : "Next"}
           className="w-11/12 mt-10 ml-4"
-          onPress={() => isLastSlide ? router.replace("/(auth)/SignUp") : swiperRef.current?.scrollBy(1)}
+          onPress={() => isLastSlide ? router.replace("/(auth)/SelectRegister") : swiperRef.current?.scrollBy(1)}
         />
       </View>
 

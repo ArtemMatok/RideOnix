@@ -5,10 +5,14 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { GetUserByEmail } from "@/services/appUser";
 import InputField from "@/components/InputField";
 
+
 type Props = {};
 
 const Profile = (props: Props) => {
   const [user, setUser] = useState<UserGet>();
+
+
+
 
   useEffect(() => {
     const userGetByEmail = async () => {

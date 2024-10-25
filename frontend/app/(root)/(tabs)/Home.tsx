@@ -96,7 +96,7 @@ const Home = (props: Props) => {
 
   const handleSignedOut = async () => {
     await AsyncStorage.removeItem("@user_email");
-    router.push("/(auth)/SignUp");
+    router.push("/(auth)/Welcome");
   };
   const handleDestinationPress = (location: {
     latitude: number;

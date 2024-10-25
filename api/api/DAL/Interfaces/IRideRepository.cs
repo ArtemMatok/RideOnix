@@ -11,5 +11,6 @@ namespace Data.Interfaces
     {
         Task<bool> AddRideAsync(Ride rideModel);
         Task<List<Ride>?> GetRidesByUserEmail(string userEmail);
+        Task<List<Ride>?> GetRidesByDriverEmail(string driverEmail);    
     }
 }

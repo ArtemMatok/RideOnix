@@ -35,15 +35,22 @@ namespace Business.Services
             return false;
         }
 
+        public async Task<DriverGetDto?> GetDriverByEmail(string email)
+        {
+            var driver = await _driverRepository.GetDriverByEmail(email);
+            
+            if(driver is null)
+            {
+                return null;
+            }
+            return _mapper.Map<DriverGetDto>(driver);  
+        }
+
         public async Task<DriverForRideDto> GetDriverById(int id)
         {
             var driver = await _driverRepository.GetDriverByIdAsync(id);
 
             DriverForRideDto driverDto = _mapper.Map<DriverForRideDto>(driver);
-
-            //driverDto.FirstName = driver.FirstName;
-            //driverDto.LastName = driver.LastName;
-            //driverDto.CarSeats = driver.CarSeats;
 
             return driverDto;
         }
@@ -58,6 +65,19 @@ namespace Business.Services
             List<DriverGetDto> driversDto = _mapper.Map<List<DriverGetDto>>(drivers);
 
             return driversDto;
+        }
+
+        public async Task<bool> IsDriverExist(string driverEmail)
+        {
+            var driver = await _driverRepository.GetDriverByEmail(driverEmail);
+            if (driver is null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public async Task<bool> UpdateDriver(int id, DriverGetDto driverDto)

@@ -28,11 +28,39 @@ namespace API.Controllers
             return Ok(await _driverService.AddDriver(driverDto));
         }
 
-        [HttpPut("EditDriver")]
-        public async Task<IActionResult> EditDriver(int id, DriverGetDto driverDto)
+        [HttpPut("EditDriver/{driverId}")]
+        public async Task<IActionResult> EditDriver(int driverId, DriverGetDto driverDto)
         {
-            return Ok(await _driverService.UpdateDriver(id, driverDto));
+            if(driverId == 0)
+            {
+                return BadRequest("Driver id is 0");
+            }
+            var result = await _driverService.UpdateDriver(driverId, driverDto);
+
+            if(result)
+            {
+                return Ok("Success edit");
+            }
+            else
+            {
+                 return BadRequest("Somehting went wrong in service");
+            }
+           
         }
-        
+
+        [HttpGet("GetDriverByEmail/{driverEmail}")]
+        public async Task<IActionResult> GetDriverByEmail(string driverEmail)
+        {
+            if(driverEmail is null)
+            {
+                return BadRequest("Driver Email is null");
+            }
+            var driver = await _driverService.GetDriverByEmail(driverEmail);  
+            if(driver is null)
+            {
+                return NotFound("Driver wasn`t found");
+            }
+            return Ok(driver);
+        }
     }
 }

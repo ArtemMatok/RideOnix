@@ -3,10 +3,10 @@ import {
   Text,
   ScrollView,
   Image,
-  Alert,
   ActivityIndicator,
+  TouchableOpacity,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
@@ -26,6 +26,7 @@ const SignUp = (props: Props) => {
     email: "",
     password: "",
   });
+  const [userRole, setUserRole] = useState<"Driver" | "User">("User");
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -34,7 +35,7 @@ const SignUp = (props: Props) => {
       if (registerValidation(form)) {
         setIsLoading(true);
         const register = async () => {
-          const data = await RegisterUser(form);
+          const data = await RegisterUser(form, "User");
           if (data) {
             await AsyncStorage.setItem("@user_email", data.email);
             const email = await AsyncStorage.getItem("@user_email");
@@ -66,6 +67,7 @@ const SignUp = (props: Props) => {
               Create Your Account
             </Text>
           </View>
+          
 
           <View className="p-5">
             <InputField
@@ -90,6 +92,7 @@ const SignUp = (props: Props) => {
               value={form.password}
               onChangeText={(value) => setForm({ ...form, password: value })}
             />
+
 
             {isLoading ? (
               <ActivityIndicator
