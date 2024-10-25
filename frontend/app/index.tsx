@@ -3,12 +3,17 @@ import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Redirect } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { UserGet } from "@/models/appUser";
+import { GetUserByEmail } from "@/services/appUser";
+import { isDriverExist } from "@/services/driver";
 
 type Props = {};
 
 const Home = (props: Props) => {
-  const [userEmail, setUserEmail] = useState<string | null>(null); // Використовуйте null для початкового стану
-  const [isLoading, setIsLoading] = useState(true); // Стан завантаження
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [user, setUser] = useState<UserGet>();
+  const [isUser, setIsUser] = useState<boolean>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getEmail = async () => {
@@ -16,6 +21,17 @@ const Home = (props: Props) => {
       console.log("Email index:", email);
       if (email) {
         setUserEmail(email);
+        const user = await GetUserByEmail(email);
+        if (user) {
+          setUser(user);
+          //TODO: ПЕРЕВІРКА НА ДРАЙВЕРА
+          const isDriver = await isDriverExist(email);
+          if(isDriver){
+            setIsUser(false);
+          }else{
+            setIsUser(true);
+          }
+        }
       }
       setIsLoading(false); // Закінчення завантаження
     };
@@ -33,14 +49,17 @@ const Home = (props: Props) => {
 
   // Після того, як завантаження завершене, робимо редирект
   return (
-     <>
-       {userEmail ? (
-         <Redirect href="/(root)/(tabs)/Home" />
-       ) : (
-         <Redirect href="/(auth)/Welcome" />
-       )}
-     </>
-
+    <>
+      {user ? (
+        isUser ? (
+          <Redirect href="/(root)/(tabs)/Home" />
+        ) : (
+          <Redirect href="/(driver)/(tabs)/HomeDriver" />
+        )
+      ) : (
+        <Redirect href="/(auth)/Welcome" />
+      )}
+    </>
   );
 };
 

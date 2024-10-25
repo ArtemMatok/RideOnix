@@ -16,24 +16,7 @@ export interface RideRequest{
     driverId: number,
 }
 
-const api  = "http://192.168.0.201:5029/api/Ride/"
-
-// export const addRide = async (rideRequest: RideRequest) => {
-//     try {
-//         await fetch(api + 'AddRide', {
-//             method: "POST",
-//             headers: {
-//                 "content-type": "application/json",
-//             },
-//             body: JSON.stringify(rideRequest)
-//         });   
-         
-//         console.log("Success");
-//     } catch (error) {
-//         console.log("ConfirmRideError:",error);
-//     }
-    
-// };
+const api  = "http://192.168.0.202:5029/api/Ride/"
 
 
 export const addRide = async(rideRequest: RideRequest) => {
@@ -62,5 +45,19 @@ export const getRidesByUserEmail = async( userEmail:string) => {
         }
     } catch (error:any) {
         console.log("GetRidesError:",error.response.data);
+    }
+}
+
+export const getRideByDriverEmail = async (driverEmail:string) => {
+    //TODO
+    try {
+        var data= await axios.get<Ride[]>(api + `GetRidesByDriverEmail/${driverEmail}`);
+        if(data){
+            return data.data;
+        }else{
+            console.log("GetRidesByDriverEmail data error");
+        }
+    } catch (error:any) {
+     console.log("GetRidesByDriverEmail:", error.response.data);   
     }
 }

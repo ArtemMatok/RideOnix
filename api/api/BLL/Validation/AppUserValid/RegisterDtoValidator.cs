@@ -23,8 +23,10 @@ namespace Business.Validation.AppUserValid
                .Matches(@"[@#$]").WithMessage("Password must contain at least one special character (@, #, $)");
 
             RuleFor(x => x.UserName)
-                .NotEmpty().WithMessage("Username is required")
-                .MinimumLength(2).WithMessage("User name must be more than 2 symbols");
+      .NotEmpty().WithMessage("Username is required")
+      .Must(userName => !string.IsNullOrWhiteSpace(userName?.Trim()))
+      .WithMessage("Username cannot be empty or just spaces")
+      .MinimumLength(2).WithMessage("User name must be more than 2 symbols (excluding spaces)");
 
         }
     }

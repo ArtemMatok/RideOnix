@@ -13,5 +13,6 @@ namespace Data.Interfaces
         Task<Driver> GetDriverByIdAsync(int id);
         Task<bool> AddDriverAsync(Driver driver);
         Task<bool> UpdateDriverAsync(int id, Driver driverForUpdate);
+        Task<Driver?> GetDriverByEmail (string email); 
     }
 }

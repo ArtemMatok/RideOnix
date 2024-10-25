@@ -53,5 +53,10 @@ namespace Data.Repositories
         {
             return await _context.Drivers.FirstOrDefaultAsync(x => x.DriverId == id);
         }
+
+        public async Task<Driver?> GetDriverByEmail(string email)
+        {
+           return await _context.Drivers.FirstOrDefaultAsync(x=>x.Email == email);    
+        }
     }
 }

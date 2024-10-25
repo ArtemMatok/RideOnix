@@ -15,12 +15,14 @@ namespace API.Controllers
         private readonly IRideService _rideService;
         private readonly ILogger<RideController> _logger;
         private readonly IUserService _userService;
+        private readonly IDriverService _driverService;
 
-        public RideController(ILogger<RideController> logger, IRideService rideService, IUserService userService)
+        public RideController(ILogger<RideController> logger, IRideService rideService, IUserService userService, IDriverService driverService)
         {
             _rideService = rideService;
             _logger = logger;
             _userService = userService;
+            _driverService = driverService;
         }
 
 
@@ -67,6 +69,25 @@ namespace API.Controllers
             }
 
             var result = await _rideService.GetRidesByUserEmail(userEmail);
+
+            return Ok(result);
+        }
+
+        [HttpGet("GetRidesByDriverEmail/{driverEmail}")]
+        public async Task<IActionResult> GetRidesByDriverEmail(string driverEmail)
+        {
+            if (driverEmail is null)
+            {
+                return BadRequest("User email is null");
+            }
+
+            var existDriver = await _driverService.IsDriverExist(driverEmail);
+            if (!existDriver)
+            {
+                return NotFound("Driver wasn`t found");
+            }
+
+            var result = await _rideService.GetRidesByDriverEmail(driverEmail);
 
             return Ok(result);
         }

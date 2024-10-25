@@ -27,6 +27,14 @@ namespace Data.Repositories
             return result > 0;
         }
 
+        public async Task<List<Ride>?> GetRidesByDriverEmail(string driverEmail)
+        {
+            return await _context.Rides
+                .Where(x => x.Driver.Email == driverEmail)
+                .Include(x => x.Driver)
+                .ToListAsync();
+        }
+
         public async Task<List<Ride>?> GetRidesByUserEmail(string userEmail)
         {
             return await _context.Rides.Where(x => x.AppUser.Email == userEmail)

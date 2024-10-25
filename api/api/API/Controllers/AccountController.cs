@@ -1,4 +1,5 @@
 ﻿using Business.DTOs.AppUserDtos;
+using Business.DTOs.DriverDtos;
 using Business.Interfaces;
 using Data.Entities;
 using FluentValidation;
@@ -19,13 +20,15 @@ namespace API.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly ITokenService _tokenService;
         private readonly SignInManager<AppUser> _signingManager;
+        private readonly IDriverService _driverService;
 
 
-        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService, SignInManager<AppUser> signingManager)
+        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService, SignInManager<AppUser> signingManager, IDriverService driverService)
         {
             _userManager = userManager;
             _tokenService = tokenService;
             _signingManager = signingManager;
+            _driverService = driverService;
         }
 
         [HttpPost("Register/{role}")]
@@ -84,7 +87,7 @@ namespace API.Controllers
                     return StatusCode(500, e.Message);
                 }
             }
-            else if(role == " Driver")
+            else if(role == "Driver")
             {
                 //TODO: доробити додавання драйвера в БД
                 try
@@ -102,6 +105,11 @@ namespace API.Controllers
                         Email = registerDto.Email,
 
                     };
+                    var driverAddDto = new DriverAddDto()
+                    {
+                        FullName = registerDto.UserName,
+                        Email = registerDto.Email,
+                    };
 
                     var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
 
@@ -110,12 +118,21 @@ namespace API.Controllers
                         var roleResult = await _userManager.AddToRoleAsync(appUser, "Driver");
                         if (roleResult.Succeeded)
                         {
-                            return Ok(new NewUserDto()
+                            var driverResult = await _driverService.AddDriver(driverAddDto);
+                            if (driverResult)
                             {
-                                Username = appUser.UserName,
-                                Email = appUser.Email,
-                                Token = _tokenService.CreateToken(appUser)
-                            });
+                                return Ok(new NewUserDto()
+                                {
+                                    Username = appUser.UserName,
+                                    Email = appUser.Email,
+                                    Token = _tokenService.CreateToken(appUser)
+                                });
+                            }
+                            else
+                            {
+                                return BadRequest("Something went wrong suring adding driver");
+                            }
+
                         }
                         else
                         {

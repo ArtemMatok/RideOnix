@@ -120,7 +120,7 @@ const BookRide = () => {
           </Text>
         </View>
         <Button
-          title="Оберіть спосіб оплати"
+          title="Choose method of payment"
           onPress={() => setVisible(true)}
         />
 
