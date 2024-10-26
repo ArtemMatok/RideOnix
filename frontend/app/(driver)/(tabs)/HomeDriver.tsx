@@ -6,6 +6,7 @@ import {
     Image,
     ActivityIndicator,
     ViewBase,
+    RefreshControl,
   } from "react-native";
   import * as Location from "expo-location";
   import React, { useEffect, useState } from "react";
@@ -37,7 +38,7 @@ import MapDriver from "@/components/MapDriver";
     const [hasPermissions, setHasPermissions] = useState(false);
     const loading = true;
     const[rides,setRides] = useState<Ride[]>([]);
-  
+    const [refreshing, setRefreshing] = useState(false);
   
     const { setUserLocation, setDestinationLocation } = useLocationStore();
   
@@ -171,6 +172,9 @@ import MapDriver from "@/components/MapDriver";
                 </Text>
               </>
             )}
+            refreshControl={
+              <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+            }
           />
         </SafeAreaView>
       </GestureHandlerRootView>

@@ -18,5 +18,6 @@ namespace Business.DTOs.DriverDtos
         [Range(1, int.MaxValue, ErrorMessage = "The number of car seats must be greater than 0.")]
         public int CarSeats { get; set; }
         public double Rating { get; set; }
+        public bool IsAvailable { get; set; }   
     }
 }

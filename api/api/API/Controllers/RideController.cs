@@ -91,5 +91,26 @@ namespace API.Controllers
 
             return Ok(result);
         }
+
+        [HttpPut("CancaledRide/{rideId}")]
+        public async Task<IActionResult> CancaledRide(int rideId)
+        {
+            var result = await _rideService.CancaledRide(rideId);
+
+            if(result)
+            {
+                return Ok("Cancaeled!");
+            }
+            else
+            {
+                return BadRequest("Something went wrong...");
+            }
+        }
+
+        [HttpGet("IsRideWaiting/{userEmail}")]
+        public async Task<bool> IsRideWaiting(string userEmail)
+        {
+            return await _rideService.IsRideWaiting(userEmail);
+        }
     }
 }

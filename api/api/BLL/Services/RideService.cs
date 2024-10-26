@@ -26,6 +26,12 @@ namespace Business.Services
             _userRepository = userRepository;
         }
 
+        public async Task<bool> CancaledRide(int rideId)
+        {
+            bool result = await _rideRepository.CancaledRide(rideId);  
+            return result;
+        }
+
         public async Task<List<RideGetDto>> GetRidesByDriverEmail(string driverEmail)
         {
             var rides = await _rideRepository.GetRidesByDriverEmail(driverEmail);
@@ -52,6 +58,12 @@ namespace Business.Services
             var ridesMap = _mapper.Map<List<RideGetDto>>(rides);  
 
             return ridesMap;
+        }
+
+        public async Task<bool> IsRideWaiting(string userEmail)
+        {
+            var result = await _rideRepository.IsRideWaiting(userEmail);
+            return result;
         }
 
         public async Task<bool> RideCreateAsync(RideAddDto rideDtoModel)

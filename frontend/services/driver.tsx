@@ -2,7 +2,7 @@ import { DriverGetDto } from "@/models/driver";
 import axios from "axios";
 import { Alert } from "react-native";
 
-const api ="http://192.168.0.202:5029/api/Driver/"
+const api ="http://192.168.0.200:5029/api/Driver/"
 
 export const GetDrivers = async () => {
     try {

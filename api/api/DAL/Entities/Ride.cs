@@ -15,6 +15,7 @@ namespace Data.Entities
         public string DestinationLongitude { get; set; }
         public double RideTime { get; set; }
         public string FarePrice { get; set; }
+        public string RideStatus { get; set; }  
         public string PaymentStatus { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 

@@ -16,7 +16,7 @@ export interface RideRequest{
     driverId: number,
 }
 
-const api  = "http://192.168.0.202:5029/api/Ride/"
+const api  = "http://192.168.0.200:5029/api/Ride/"
 
 
 export const addRide = async(rideRequest: RideRequest) => {
@@ -59,5 +59,30 @@ export const getRideByDriverEmail = async (driverEmail:string) => {
         }
     } catch (error:any) {
      console.log("GetRidesByDriverEmail:", error.response.data);   
+    }
+}
+
+export const CanceledRide = async (rideId:number) => {
+    try {
+        const data = await axios.put(api+`CancaledRide/${rideId}`);
+        if(data){
+            return true;
+        }else{
+            Alert.alert("Canceling is not successed");
+            return false;
+        
+        }
+    } catch (error:any) {
+        console.log('CancelRideError:', error.response.data);
+        Alert.alert("Something went wrong...")
+    }
+}
+
+export const IsRideWaiting = async(userEmail:string) => {
+    try {
+        const data = await axios.get<boolean>(api + `IsRideWaiting/${userEmail}`);
+        return data.data;
+    } catch (error:any) {
+        console.log("isRideWaiting error:",error.response.data);
     }
 }

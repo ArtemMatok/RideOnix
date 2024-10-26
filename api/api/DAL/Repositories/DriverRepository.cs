@@ -46,7 +46,9 @@ namespace Data.Repositories
 
         public async Task<List<Driver>> GetDriverAsync()
         {
-            return await _context.Drivers.ToListAsync();
+            return await _context.Drivers
+                .Where(x=>x.IsAvailable)
+                .ToListAsync();
         }
 
         public async Task<Driver> GetDriverByIdAsync(int id)
