@@ -21,10 +21,33 @@ namespace Data.Repositories
 
         public async Task<bool> AddRideAsync(Ride rideModel)
         {
+            rideModel.Driver.IsAvailable = false;
+
             await _context.Rides.AddAsync(rideModel);
             var result = await _context.SaveChangesAsync();
 
             return result > 0;
+        }
+
+        public async Task<bool> CancaledRide(int rideId)
+        {
+            var ride = await _context.Rides
+                .Include(x=>x.Driver)
+                .FirstOrDefaultAsync(x => x.RideId == rideId);
+
+            if (ride == null)
+            {
+                return false;
+            }
+
+            ride.Driver.IsAvailable = true;
+            ride.PaymentStatus = "Canceled";
+            ride.RideStatus = "Canceled";
+
+            _context.Rides.Update(ride);
+            var saved =  await _context.SaveChangesAsync();
+
+            return saved > 0;
         }
 
         public async Task<List<Ride>?> GetRidesByDriverEmail(string driverEmail)
@@ -42,6 +65,15 @@ namespace Data.Repositories
                 .Include(x=>x.Driver)
                 .OrderByDescending(x=>x.RideId)
                 .ToListAsync();
+        }
+
+        public async Task<bool> IsRideWaiting(string userEmail)
+        {
+            var result = await _context.Rides
+                .Where(x=>x.userEmail == userEmail)
+                .AnyAsync(x => x.RideStatus == "Waiting accepting");
+
+            return result;
         }
     }
 }

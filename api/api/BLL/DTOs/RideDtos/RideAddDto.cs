@@ -19,6 +19,7 @@ namespace Business.DTOs.RideDtos
         public string DestinationLongitude { get; set; }
         public double RideTime { get; set; }
         public string FarePrice { get; set; }
+        public string RideStatus { get; set; }
         public string PaymentStatus { get; set; }
 
         //User

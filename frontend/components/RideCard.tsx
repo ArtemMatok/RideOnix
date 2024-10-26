@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import React, { useEffect } from "react";
 import { Ride } from "@/types/type";
 import { EXPO_PUBLIC_GEOAPIFY_API_KEY } from "@/constants/urlApi";
@@ -7,6 +7,7 @@ import { formatDate, formatTime } from "@/lib/formateDate";
 
 type Props = {
   ride: Ride;
+  onCancel: (rideId: number) => void;
 };
 
 const RideCard = ({
@@ -19,9 +20,31 @@ const RideCard = ({
     createdAt,
     rideTime,
     driver,
+    rideStatus,
     paymentStatus,
   },
+  onCancel,
 }: Props) => {
+
+
+
+  const confirmCancel = () => {
+    Alert.alert(
+      "Confirm Cancellation",
+      "Are you sure you want to cancel this ride?",
+      [
+        {
+          text: "No",
+          style: "cancel",
+        },
+        {
+          text: "Yes",
+          onPress: () => onCancel(rideId),
+          style: "destructive",
+        },
+      ]
+    );
+  };
 
   return (
     <View className="flex flex-row items-center justify-center bg-white rounded-lg shadow-sm shadow-neutral-300 mb-3">
@@ -49,32 +72,23 @@ const RideCard = ({
           </View>
         </View>
 
-        <View className="flex flex-col w0full mt-5 bg-general rounded-lg p-3 items-start justify-center">
+        <View className="flex flex-col w-full mt-5 bg-general rounded-lg p-3 items-start justify-center">
           <View className="flex flex-row items-center w-full justify-between mb-5">
-            <Text className="text-md font-JakartaMedium">
-             Date & Time
-            </Text>
-
+            <Text className="text-md font-JakartaMedium">Date & Time</Text>
             <Text className="text-md font-JakartaMedium">
               {formatDate(String(createdAt))}, {formatTime(rideTime)}
             </Text>
           </View>
-          
-          <View className="flex flex-row items-center w-full justify-between mb-5">
-            <Text className="text-md font-JakartaMedium">
-             Driver
-            </Text>
 
+          <View className="flex flex-row items-center w-full justify-between mb-5">
+            <Text className="text-md font-JakartaMedium">Driver</Text>
             <Text className="text-md font-JakartaMedium">
               {driver.firstName} {driver.lastName}
             </Text>
           </View>
 
           <View className="flex flex-row items-center w-full justify-between mb-5">
-            <Text className="text-md font-JakartaMedium">
-             Car Seats
-            </Text>
-
+            <Text className="text-md font-JakartaMedium">Car Seats</Text>
             <Text className="text-md font-JakartaMedium">
               {driver.carSeats}
             </Text>
@@ -82,13 +96,51 @@ const RideCard = ({
 
           <View className="flex flex-row items-center w-full justify-between mb-5">
             <Text className="text-md font-JakartaMedium text-gray-500">
-             Payment
+              Payment
             </Text>
-
-            <Text className={`text-md capitalize font-JakartaMedium text-gray-500 ${paymentStatus === "Paid" ? "text-green-500": "text-red-500"}`}>
+            <Text
+              className={`text-md capitalize font-JakartaMedium ${
+                paymentStatus === "Paid"
+                  ? "text-green-500"
+                  : paymentStatus === "Waiting accepting"
+                  ? "text-yellow-500"
+                  : paymentStatus === "Canceled"
+                  ? "text-red-500"
+                  : "text-gray-500"
+              }`}
+            >
               {paymentStatus}
             </Text>
           </View>
+
+          <View className="flex flex-row items-center w-full justify-between mb-5">
+            <Text className="text-md font-JakartaMedium text-gray-500">
+              Ride status
+            </Text>
+            <Text
+              className={`text-md capitalize font-JakartaMedium ${
+                rideStatus === "Finished"
+                  ? "text-green-500"
+                  : rideStatus === "Waiting accepting"
+                  ? "text-yellow-500"
+                  : rideStatus === "Canceled"
+                  ? "text-red-500"
+                  : "text-gray-500"
+              }`}
+            >
+              {rideStatus}
+            </Text>
+          </View>
+
+          {/* Кнопка скасування замовлення */}
+          {rideStatus !== "Canceled" && (
+            <TouchableOpacity
+              onPress={confirmCancel}
+              className="bg-red-500 w-full py-2 rounded-lg items-center mt-3"
+            >
+              <Text className="text-white font-JakartaMedium">Cancel</Text>
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     </View>

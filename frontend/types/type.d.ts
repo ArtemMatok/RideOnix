@@ -49,6 +49,7 @@ declare interface Ride {
   driverId: number;
   userEmail: string;
   createdAt: Date;
+  rideStatus:string;
   driver: {
     driverId: number;
     firstName: string;

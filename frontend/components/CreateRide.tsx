@@ -36,9 +36,10 @@ export const CreateRide = ({
     destinationLongitude: destinationLongitude!.toString(),
     rideTime: rideTime,
     farePrice: amount,  
-    paymentStatus: "Paid",
+    paymentStatus: "Waiting accepting",
     userEmail: email,
     driverId: driverId,
+    rideStatus:"Waiting accepting"
   };
 
   console.log(`create ride userLatitude: ${userLatitude}`);
@@ -53,23 +54,3 @@ export const CreateRide = ({
   );
 };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     flex: 1
-//   },
-//   button: {
-//     backgroundColor: '#1e90ff', 
-//     paddingVertical: 15,
-//     paddingHorizontal: 25, 
-//     borderRadius: 10, 
-//     marginVertical: 10, 
-//   },
-//   buttonText: {
-//     color: '#fff', 
-//     fontSize: 18, 
-//     fontWeight: 'bold', 
-//     textAlign: 'center', 
-//   }
-// });

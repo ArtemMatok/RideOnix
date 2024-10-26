@@ -12,6 +12,7 @@ namespace Business.Interfaces
         Task<bool> RideCreateAsync(RideAddDto rideDtoModel);
         Task<List<RideGetDto>> GetRidesByUserEmail(string email);
         Task<List<RideGetDto>> GetRidesByDriverEmail(string driverEmail);
-
+        Task<bool> CancaledRide(int rideId);
+        Task<bool> IsRideWaiting(string userEmail);
     }
 }
