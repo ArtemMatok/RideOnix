@@ -26,10 +26,29 @@ namespace Business.Services
             _userRepository = userRepository;
         }
 
+        public async Task<bool> AcceptingRide(int rideId)
+        {
+            var result = await _rideRepository.AcceptingRide(rideId);
+            return result;
+        }
+
         public async Task<bool> CancaledRide(int rideId)
         {
             bool result = await _rideRepository.CancaledRide(rideId);  
             return result;
+        }
+
+        public async Task<bool> FinishRide(int rideId)
+        {
+            var rideResult = await _rideRepository.StopRide(rideId);
+            return rideResult;
+        }
+
+        public async Task<RideGetDto?> GetRideById(int rideId)
+        {
+            var ride =  await _rideRepository.GetRideById(rideId);  
+
+            return _mapper.Map<RideGetDto?>(ride);  
         }
 
         public async Task<List<RideGetDto>> GetRidesByDriverEmail(string driverEmail)
@@ -66,6 +85,19 @@ namespace Business.Services
             return result;
         }
 
+        public async Task<bool> PaymentRide(int rideId, string paymentMethod)
+        {
+            var paymentResult = await _rideRepository.PaymentRide(rideId, paymentMethod);
+
+            return paymentResult;
+        }
+
+        public async Task<bool> RatingRide(int rideId, int rating)
+        {
+            var result = await _rideRepository.RatingRide(rideId, rating);  
+            return result;
+        }
+
         public async Task<bool> RideCreateAsync(RideAddDto rideDtoModel)
         {
             if(rideDtoModel is null)
@@ -88,6 +120,12 @@ namespace Business.Services
                 return true;
             }
             return false;
+        }
+
+        public async Task<bool> StartRide(int rideId)
+        {
+           var rideResult = await _rideRepository.StartRide(rideId);    
+            return rideResult;  
         }
     }
 }

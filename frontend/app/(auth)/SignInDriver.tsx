@@ -6,7 +6,7 @@ import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
 import { Link, router } from "expo-router";
 import { loginValidation } from "@/lib/loginValidation";
-import { LoginUser } from "@/services/appUser";
+import { LoginDriver, LoginUser } from "@/services/appUser";
 import ReactNativeModal from "react-native-modal";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -26,7 +26,7 @@ const SignInDriver = (props: Props) => {
       if (loginValidation(form)) {
         setIsLoading(true);
         const login = async () => {
-          const data = await LoginUser(form);
+          const data = await LoginDriver(form);
           if (data) {
             await AsyncStorage.setItem("@user_email", data.email);
             const email =   await AsyncStorage.getItem("@user_email");

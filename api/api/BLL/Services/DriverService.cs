@@ -55,6 +55,26 @@ namespace Business.Services
             return driverDto;
         }
 
+        public async Task<DriverGetDto?> GetDriverFullById(int driverId)
+        {
+            var driver = await _driverRepository.GetDriverByIdAsync(driverId);
+
+            return _mapper.Map<DriverGetDto>(driver);
+        }
+
+        public async Task<double> GetDriverRating(string driverEmail)
+        {
+            var driver = await _driverRepository.GetDriverByEmail(driverEmail);
+            if (driver == null)
+            {
+                throw new Exception("Driver not found.");
+            }
+
+            var rating =  _driverRepository.GetDriverRating(driver);
+            
+            return rating;  
+        }
+
         public async Task<List<DriverGetDto>> GetDrivers()
         {
             var drivers = await _driverRepository.GetDriverAsync();
@@ -110,5 +130,7 @@ namespace Business.Services
                 }
             }
         }
+
+        
     }
 }   

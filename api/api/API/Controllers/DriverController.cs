@@ -62,5 +62,31 @@ namespace API.Controllers
             }
             return Ok(driver);
         }
+
+        [HttpGet("GetDriverFullById/{driverId}")]
+        public async Task<IActionResult> GetDriverFullById(int driverId)
+        {
+            var driver = await _driverService.GetDriverFullById(driverId);  
+            if(driver is null)
+            {
+                return NotFound();
+            }
+            return Ok(driver);      
+        }
+
+        [HttpGet("GetDriverRating/{driverEmail}")]
+        public async Task<IActionResult> GetDriverRating(string driverEmail)
+        {
+            try
+            {
+                var rating = await _driverService.GetDriverRating(driverEmail);
+                return Ok(rating);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

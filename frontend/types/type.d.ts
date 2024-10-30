@@ -22,6 +22,7 @@ declare interface MarkerData {
   carSeats: number;
   rating: number;
   fullName: string;
+  email:string;
   typeOfCar?: "Comfort" | "Business";
   time?: number;
   price?: string;
@@ -50,10 +51,10 @@ declare interface Ride {
   userEmail: string;
   createdAt: Date;
   rideStatus:string;
+  rideRaiting:number;
   driver: {
     driverId: number;
-    firstName: string;
-    lastName: string;
+    fullName:string;
     carSeats: number;
   };
 }

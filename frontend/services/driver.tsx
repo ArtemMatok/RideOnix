@@ -2,7 +2,7 @@ import { DriverGetDto } from "@/models/driver";
 import axios from "axios";
 import { Alert } from "react-native";
 
-const api ="http://192.168.0.200:5029/api/Driver/"
+const api ="http://192.168.0.106:5029/api/Driver/"
 
 export const GetDrivers = async () => {
     try {
@@ -48,5 +48,27 @@ export const EditDriverProfile = async (driverId:number, driverDto:DriverGetDto)
     } catch (error:any) {
         console.log("EditDriverProfile error:", error.response.data);
         Alert.alert("Something went wrong during saving");
+    }
+}
+
+export const GetDriverFullById = async(driverId:number) =>{
+    try {
+        const data = await axios.get<DriverGetDto>(api+ `GetDriverFullById/${driverId}`);
+        if(data){
+            return data.data;
+        }
+    } catch (error:any) {
+        console.log("GetDriverFullById error:", error.response.data);
+    }
+}
+
+export const GetDriverRating = async(driverEmail:string) => {
+    try {
+        const data = await axios.get<number>(api + `GetDriverRating/${driverEmail}`)
+        if(data){
+            return data.data;
+        }
+    } catch (error:any) {
+        console.log("GetDriverRating error:", error.response.data)
     }
 }

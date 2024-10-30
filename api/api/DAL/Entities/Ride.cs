@@ -18,6 +18,7 @@ namespace Data.Entities
         public string RideStatus { get; set; }  
         public string PaymentStatus { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public int RideRaiting { get; set; } = 0;
 
 
         //User

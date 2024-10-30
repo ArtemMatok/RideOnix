@@ -51,7 +51,7 @@ namespace Data.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Driver> GetDriverByIdAsync(int id)
+        public async Task<Driver?> GetDriverByIdAsync(int id)
         {
             return await _context.Drivers.FirstOrDefaultAsync(x => x.DriverId == id);
         }
@@ -59,6 +59,18 @@ namespace Data.Repositories
         public async Task<Driver?> GetDriverByEmail(string email)
         {
            return await _context.Drivers.FirstOrDefaultAsync(x=>x.Email == email);    
+        }
+
+        public double GetDriverRating(Driver driver)
+        {
+            if(driver.AllRaiting.Count() == 0)
+            {
+                return 0;
+            }
+
+            var rating = driver.AllRaiting.Sum() / driver.AllRaiting.Count();
+
+            return rating;
         }
     }
 }

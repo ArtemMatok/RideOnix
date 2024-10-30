@@ -95,6 +95,10 @@ namespace Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DriverId"));
 
+                    b.Property<string>("AllRaiting")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CarImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -178,6 +182,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RideRaiting")
+                        .HasColumnType("int");
+
                     b.Property<string>("RideStatus")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -227,19 +234,19 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5e3da351-9c03-41f1-9b49-b8281354f2fe",
+                            Id = "9733ac5d-ce03-4942-ba2f-b165804b2291",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "80fa0bb7-fbe9-4fd3-88b9-f392e521f165",
+                            Id = "ffc1897f-992c-4e43-90f2-d76fb4e84b64",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "752da463-cb4a-4b85-893f-9041750c4705",
+                            Id = "627f9b73-bf80-4e9c-abe2-8f8ad20b2da8",
                             Name = "Driver",
                             NormalizedName = "DRIVER"
                         });

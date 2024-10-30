@@ -14,5 +14,11 @@ namespace Business.Interfaces
         Task<List<RideGetDto>> GetRidesByDriverEmail(string driverEmail);
         Task<bool> CancaledRide(int rideId);
         Task<bool> IsRideWaiting(string userEmail);
+        Task<bool> AcceptingRide(int rideId);
+        Task<RideGetDto?> GetRideById(int rideId);
+        Task<bool> PaymentRide(int rideId, string paymentMethod);
+        Task<bool> StartRide(int rideId);
+        Task<bool> FinishRide(int rideId);
+        Task<bool> RatingRide(int rideId, int rating);
     }
 }

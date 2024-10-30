@@ -41,9 +41,7 @@ namespace Business.Validation.RideValid
 
 
             RuleFor(x => x.PaymentStatus)
-                .NotEmpty().WithMessage("Payment Status is required.")
-                .Must(status => new[] { "Paid", "Waiting accepting", "Canceled" }.Contains(status))
-                .WithMessage("Payment Status must be either 'Paid', 'Unpaid', or 'Pending'.");
+                .NotEmpty().WithMessage("Payment Status is required.");
 
             RuleFor(x => x.userEmail)
                 .NotEmpty().WithMessage("User Email is required.")

@@ -6,7 +6,7 @@ import CustomButton from "./CustomButton";
 import { paymentSheet } from "@/services/payment";
 import { router } from "expo-router";
 import { useLocationStore } from "@/store";
-import { addRide } from "@/services/ride";
+import { addRide, PaymentRide } from "@/services/ride";
 
 type Props = {
   name: string;
@@ -14,36 +14,19 @@ type Props = {
   amount: number;
   driverId: number;
   rideTime: number;
+  rideId:number;
+  paymentMethod:string;
 };
 
-export default function CheckoutScreen({ name, email, amount,rideTime, driverId }: Props) {
+export default function CheckoutScreen({ name, email, amount, rideId, driverId, paymentMethod }: Props) {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
   const [success, setSuccess] = useState<boolean>(false);
 
   const [loading, setLoading] = useState(false);
 
-  const {
-    userAddress,
-    userLongitude, 
-    userLatitude,
-    destinationLatitude,
-    destinationAddress,
-    destinationLongitude
-  } = useLocationStore();
 
-  const request = {
-    originAddress: userAddress!,
-    destinationAddress: destinationAddress!.toString(),
-    originLatitude: userLatitude!.toString(),
-    originLongitude: userLongitude!.toString(),
-    destinationLatitude: destinationLatitude!.toString(),
-    destinationLongitude: destinationLongitude!.toString(),
-    rideTime: rideTime,
-    farePrice: amount.toString(),  
-    paymentStatus: "Paid",
-    userEmail: email,
-    driverId: driverId,
-  };
+
+
 
   const fetchPaymentSheetParams = async () => {
 
@@ -90,7 +73,7 @@ export default function CheckoutScreen({ name, email, amount,rideTime, driverId 
     } else {
       setSuccess(true);
       try {
-        await addRide(request);
+        await PaymentRide(rideId, paymentMethod);
         setSuccess(true);
       } catch (error) {
         Alert.alert("Error", "Something went wrong during adding ride");
@@ -98,14 +81,13 @@ export default function CheckoutScreen({ name, email, amount,rideTime, driverId 
       router.push("/(root)/(tabs)/Home");
     }
   };
-
   return (
     <>
       <CustomButton
         title="Confirm Ride"
         className="my-2"
         onPress={onPaymentSheet}
-      ></CustomButton>
+      />
     </>
   );
 }
