@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Ride } from '@/types/type'
-import { getRidesByUserEmail } from '@/services/ride'
+import { CanceledRide, getRidesByUserEmail } from '@/services/ride'
 import RideCard from '@/components/RideCard'
 import { images } from '@/constants'
 
@@ -35,11 +35,24 @@ const Rides = (props: Props) => {
 
     getEmail();
   }, []);
+
+  const cancelRide = async (rideId: number) => {
+    const result = await CanceledRide(rideId);
+    if (result) {
+      setRides((prevRides) =>
+        prevRides.map((ride) =>
+          ride.rideId === rideId
+            ? { ...ride, rideStatus: "Canceled", paymentStatus: "Canceled" }
+            : ride
+        )
+      );
+    }
+  };
   return (
     <SafeAreaView>
       <FlatList
           data={rides }
-          renderItem={({ item }) => <RideCard ride={item} />}
+          renderItem={({ item }) => <RideCard onCancel={cancelRide} ride={item} />}
           className="px-5"
           keyboardShouldPersistTaps="handled"
           contentContainerStyle={{

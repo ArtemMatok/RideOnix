@@ -10,6 +10,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { GetUserByEmail } from "@/services/appUser";
 import { UserGet } from "@/models/appUser";
 import { PaymentMethod } from "@/types/type";
+import { GetDriverRating } from "@/services/driver";
 
 const BookRide = () => {
   const { userAddress, destinationAddress } = useLocationStore();
@@ -18,6 +19,8 @@ const BookRide = () => {
   const [user, setUser] = useState<UserGet>();
   const [visible, setVisible] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState("Card");
+  const[driverRating,setDriverRating] = useState<number>();
+
 
   const driverDetails = drivers?.filter(
     (driver) => +driver.driverId === selectedDriver
@@ -32,11 +35,24 @@ const BookRide = () => {
         const data = await GetUserByEmail(userEmail);
         if (data) {
           setUser(data);
+
         }
+        
       }
     };
+
+    const getRating = async() => {
+      const dataRating = await GetDriverRating(driverDetails.email);
+      if(dataRating){
+        setDriverRating(dataRating);
+      }
+    }
+
+    getRating();
     getUserByEmail();
   }, []);
+
+  
 
   return (
     <RideLayout title="Book Ride" snapPoints={["40%", "90%"]}>
@@ -63,7 +79,7 @@ const BookRide = () => {
                 resizeMode="contain"
               />
               <Text className="text-lg font-JakartaRegular">
-                {driverDetails?.rating}
+                {driverRating}
               </Text>
             </View>
           </View>
@@ -113,35 +129,8 @@ const BookRide = () => {
             </Text>
           </View>
         </View>
-        <View className="flex flex-row items-center justify-start border-b border-general-700 w-full py-3 mt-5">
-          <Image source={icons.dollar} className="w-6 h-6" />
-          <Text className="text-lg font-JakartaRegular ml-2">
-            {paymentMethod === "Card" ? "Card" : "Cash"}
-          </Text>
-        </View>
-        <Button
-          title="Choose method of payment"
-          onPress={() => setVisible(true)}
-        />
 
-        <Modal visible={visible} transparent={true}>
-          <View className="flex-1 justify-center items-center">
-            <View className="bg-white p-5 rounded-xl w-4/5">
-              <Text className="text-lg font-semibold mb-2">
-                Method of payment
-              </Text>
-              <Picker
-                selectedValue={paymentMethod}
-                onValueChange={(itemValue) => setPaymentMethod(itemValue)}
-                className="w-full"
-              >
-                <Picker.Item label="Card" value="card" />
-                <Picker.Item label="Cash" value="cash" />
-              </Picker>
-              <Button title="Close" onPress={() => setVisible(false)} />
-            </View>
-          </View>
-        </Modal>
+
 
         <Payment
           userName={user?.username!}

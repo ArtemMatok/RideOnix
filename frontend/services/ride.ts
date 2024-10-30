@@ -16,7 +16,7 @@ export interface RideRequest{
     driverId: number,
 }
 
-const api  = "http://192.168.0.200:5029/api/Ride/"
+const api  = "http://192.168.0.106:5029/api/Ride/"
 
 
 export const addRide = async(rideRequest: RideRequest) => {
@@ -84,5 +84,75 @@ export const IsRideWaiting = async(userEmail:string) => {
         return data.data;
     } catch (error:any) {
         console.log("isRideWaiting error:",error.response.data);
+    }
+}
+
+export const AcceptingRide = async(rideId:number) => {
+    try {
+        const data = await axios.put(api + `AcceptingRide/${rideId}`);
+
+        if(data){
+            return data.data;
+        }
+    } catch (error:any) {
+        console.log("AcceptingRide error:", error.response.data);
+        Alert.alert("Try again later...")
+    }
+}
+
+export const GetRideById = async(rideId:number) => {
+    try {
+        const data = await axios.get<Ride>(api + `GetRideById/${rideId}`);
+        if(data){
+            return data.data;
+        }
+    } catch (error:any) {
+        console.log("GetRideById error:",error.repsonse.data);
+    }
+}
+
+export const PaymentRide = async(rideId:number, paymentMethod:string) => {
+    try {
+        const data = await axios.put(api + `PaymentRide/${rideId}/${paymentMethod}`);
+        if(data){
+            return data.data;
+        }
+    } catch (error:any) {
+        console.log("PaymentRide error:",error.repsonse.data);
+    }
+}
+
+export const StartRide = async(rideId:number) => {
+    try {
+        const data = await axios.put(api+`StartRide/${rideId}`);
+        if(data){
+            return data.data
+        }else{
+            console.log("error data startRide");
+        }
+    } catch (error:any) {
+        console.log("StartRide error:",error.repsonse.data);
+    }
+}
+
+export const FinishRide = async(rideId:number) => {
+    try {
+        const data = await axios.put(api+`FinishRide/${rideId}`);
+        if(data){
+            return data.data
+        }
+    } catch (error:any) {
+        console.log("FinishRide error:",error.repsonse.data);
+    }
+}
+
+export const RatingRide = async(rideId:number, rating:number) => {
+    try {
+        const data = await axios.put(api + `RatingRide/${rideId}/${rating}`);
+        if(data){
+            return data.data;
+        }
+    } catch (error:any) {
+        console.log("RatingRide error:",error.repsonse.data);
     }
 }

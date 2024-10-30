@@ -89,7 +89,7 @@ namespace API.Controllers
             }
             else if(role == "Driver")
             {
-                //TODO: доробити додавання драйвера в БД
+                
                 try
                 {
                     ValidationResult resultValidation = await validator.ValidateAsync(registerDto);
@@ -190,6 +190,51 @@ namespace API.Controllers
                 }
             );
         }
+
+        [HttpPost("LoginDriver")]
+        public async Task<IActionResult> LoginDriver(LoginDto loginDto, [FromServices] IValidator<LoginDto> validator)
+        {
+            // Валідую вхідні дані
+            ValidationResult resultValidation = await validator.ValidateAsync(loginDto);
+            if (!resultValidation.IsValid)
+            {
+                return BadRequest(resultValidation.Errors);
+            }
+
+            // Перевірка наявності користувача з введеним email
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == loginDto.Email);
+            if (user is null)
+            {
+                return Unauthorized("Invalid Email");
+            }
+
+            // Перевірка пароля
+            var result = await _signingManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+            if (!result.Succeeded)
+            {
+                return Unauthorized("Email not found and/or password incorrect");
+            }
+
+            // Отримання ролей користувача
+            var roles = await _userManager.GetRolesAsync(user);
+
+
+            if (!roles.Contains("Driver"))
+            {
+                return Forbid("User does not have the required role.");
+            }
+
+            // Успішний вхід з поверненням токена
+            return Ok(
+                new NewUserDto
+                {
+                    Username = user.UserName,
+                    Email = user.Email,
+                    Token = _tokenService.CreateToken(user)
+                }
+            );
+        }
+
 
         [HttpGet("GetUserByEmail/{email}")]
         public async Task<IActionResult> GetUserByEmail(string email)

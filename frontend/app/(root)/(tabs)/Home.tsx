@@ -6,6 +6,7 @@ import {
   Image,
   ActivityIndicator,
   RefreshControl,
+  Alert,
 } from "react-native";
 import * as Location from "expo-location";
 import React, { useEffect, useState, useCallback } from "react";
@@ -27,6 +28,7 @@ import {
   CanceledRide,
   getRidesByUserEmail,
   IsRideWaiting,
+  RatingRide,
 } from "@/services/ride";
 import { useUserData } from "@/hooks/useUserData";
 import { useLocationPermissions } from "@/hooks/useLocationPermissions";
@@ -122,10 +124,21 @@ const Home = (props: Props) => {
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
-    await fetchData(); // Заново завантажуємо дані
+    await fetchData(); 
     await requestLocation();
     setRefreshing(false);
   }, []);
+
+  const onRateDriver = async(rideId:number, rating:number) => {
+    await RatingRide(rideId, rating);
+    setRides((prevRides) =>
+      prevRides.map((ride) =>
+        ride.rideId === rideId
+          ? { ...ride, rideRaiting:rating }
+          : ride
+      )
+    );
+  }
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -133,7 +146,7 @@ const Home = (props: Props) => {
         <FlatList
           data={rides.slice(0, 5)}
           renderItem={({ item }) => (
-            <RideCard onCancel={cancelRide} ride={item} />
+            <RideCard onCancel={cancelRide} ride={item} onRateDriver={onRateDriver} />
           )}
           className="px-5"
           keyboardShouldPersistTaps="handled"

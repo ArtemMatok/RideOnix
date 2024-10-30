@@ -22,6 +22,7 @@ namespace Business.DTOs.RideDtos
         public string RideStatus { get; set; }
         public string UserEmail { get; set; }
         public DateTime CreatedAt { get; set; }
+        public int RideRaiting { get; set; }
         public int DriverId { get; set; }
         public DriverShortDto Driver { get; set; }
     }

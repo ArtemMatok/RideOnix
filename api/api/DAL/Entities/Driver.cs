@@ -19,6 +19,7 @@ namespace Data.Entities
         [Range(1, int.MaxValue, ErrorMessage = "The number of car seats must be greater than 0.")]
         public int CarSeats { get; set; } = 1;
         public double? Rating { get; set; } = 0;
+        public List<double> AllRaiting { get; set; } = new List<double>();
 
         public List<Ride> Rides { get; set; } = new List<Ride>();
     }

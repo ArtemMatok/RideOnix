@@ -112,5 +112,89 @@ namespace API.Controllers
         {
             return await _rideService.IsRideWaiting(userEmail);
         }
+
+        [HttpPut("AcceptingRide/{rideId}")]
+        public async Task<IActionResult> AcceptingRide(int rideId)
+        {
+            var result = await _rideService.AcceptingRide(rideId);
+
+            if(result)
+            {
+                return Ok("Successfully");
+            }
+            else
+            {
+                return BadRequest("Something went wrong");
+            }
+        }
+
+        [HttpGet("GetRideById/{rideId}")]
+        public async Task<IActionResult> GetRideById(int rideId)
+        {
+            var ride = await _rideService.GetRideById(rideId);  
+            if(ride is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(ride);
+        }
+
+        [HttpPut("PaymentRide/{rideId}/{paymentMethod}")]
+        public async Task<IActionResult> PaymentRide(int rideId,string paymentMethod)
+        {
+            var result = await _rideService.PaymentRide(rideId, paymentMethod);
+
+            if(result)
+            {
+                return Ok("Success");
+            }
+            else
+            {
+                return BadRequest("Something went wrong during updating");
+            }
+        }
+
+        [HttpPut("StartRide/{rideId}")]
+        public async Task<IActionResult> StartRide(int rideId)
+        {
+            var result = await _rideService.StartRide(rideId);
+            if(result)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest("Something went wrong");
+            }
+        }
+
+        [HttpPut("FinishRide/{rideId}")]
+        public async Task<IActionResult> FinishRide(int rideId)
+        {
+            var result = await _rideService.FinishRide(rideId);
+            if (result)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest("Something went wrong");
+            }
+        }
+
+        [HttpPut("RatingRide/{rideId}/{rating}")]
+        public async Task<IActionResult> RatingRide(int rideId, int rating)
+        {
+            var result = await _rideService.RatingRide(rideId, rating); 
+            if(result)
+            {
+                return Ok("Success");
+            }
+            else
+            {
+                return BadRequest("Something went wrong");
+            }
+        }
     }
 }

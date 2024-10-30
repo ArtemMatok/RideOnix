@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 import { icons } from "@/constants";
 import { formatTime } from "@/lib/utils";
 import { DriverCardProps } from "@/types/type";
+import { GetDriverRating } from "@/services/driver";
 
 const DriverCard = ({ item, selected, setSelected }: DriverCardProps) => {
+  const [ratingDriver, setRatingDriver] = useState<number>();
+  useEffect(() => {
+    const getRating = async() => {
+      const data = await GetDriverRating(item.email);
+     if(data){
+      setRatingDriver(data);
+     }
+    }
+    getRating();
+  },[])
+
   return (
     <TouchableOpacity
       onPress={setSelected}
@@ -24,7 +36,7 @@ const DriverCard = ({ item, selected, setSelected }: DriverCardProps) => {
 
           <View className="flex flex-row items-center space-x-1 ml-2">
             <Image source={icons.star} className="w-3.5 h-3.5" />
-            <Text className="text-sm font-JakartaRegular">4</Text>
+            <Text className="text-sm font-JakartaRegular">{ratingDriver}</Text>
           </View>
         </View>
 
