@@ -20,4 +20,8 @@ Welcome to **RideOnix** – a next-generation ride-sharing app inspired by popul
 
 ---
 
+## 🛠️ Tech Stack
 
+- **Frontend**: [React Native](https://reactnative.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Backend**: [.NET Core](https://dotnet.microsoft.com/)
+- **Payment Integration**: [Stripe](https://stripe.com/) for secure transactions
