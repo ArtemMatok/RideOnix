@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Ride } from '@/types/type'
-import { CanceledRide, getRidesByUserEmail } from '@/services/ride'
+import { CanceledRide, getRidesByUserEmail, RatingRide } from '@/services/ride'
 import RideCard from '@/components/RideCard'
 import { images } from '@/constants'
 
@@ -21,8 +21,6 @@ const Rides = (props: Props) => {
 
         if (userEmail) {
           setEmail(userEmail);
-         
-
           const dataRides = await getRidesByUserEmail(userEmail);
           if(dataRides){
             setRides(dataRides);
@@ -48,11 +46,19 @@ const Rides = (props: Props) => {
       );
     }
   };
+  const onRateDriver = async (rideId: number, rating: number) => {
+    await RatingRide(rideId, rating);
+    setRides((prevRides) =>
+      prevRides.map((ride) =>
+        ride.rideId === rideId ? { ...ride, rideRaiting: rating } : ride
+      )
+    );
+  };
   return (
     <SafeAreaView>
       <FlatList
           data={rides }
-          renderItem={({ item }) => <RideCard onCancel={cancelRide} ride={item} />}
+          renderItem={({ item }) => <RideCard onCancel={cancelRide} ride={item} onRateDriver={onRateDriver} />}
           className="px-5"
           keyboardShouldPersistTaps="handled"
           contentContainerStyle={{

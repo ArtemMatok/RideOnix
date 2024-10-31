@@ -143,3 +143,14 @@ declare interface DriverCardProps {
   selected: number;
   setSelected: () => void;
 }
+
+declare interface UserStore{
+  user:UserGet;
+  setUser:(userEmail:string) => void;
+  handleSignedOut: () => void;
+}
+
+declare interface RidesStore{
+  rides:Ride[];
+  setRides:(email:string, role:string) => void;
+}

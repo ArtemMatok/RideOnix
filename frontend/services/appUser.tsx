@@ -2,7 +2,7 @@ import { LoginDto, newUserGet, RegisterDto, UserGet } from "@/models/appUser";
 import axios from "axios";
 import { Alert } from "react-native";
 
-const api = "http://192.168.0.106:5029/api/Account/"
+const api = "http://192.168.0.202:5029/api/Account/"
 // const api2 = "http://192.168.0.111:5234/api/Account/" 
 
 export const RegisterUser = async (registerUser:RegisterDto, role:string) => {

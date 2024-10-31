@@ -41,6 +41,16 @@ const _layout = (props: Props) => {
         }}
       />
       <Tabs.Screen
+        name="RidesDriver"
+        options={{
+          title: "Rides",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} source={icons.list} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="ProfileDriver"
         options={{
           title: "Profile",
